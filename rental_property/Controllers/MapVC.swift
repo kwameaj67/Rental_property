@@ -29,11 +29,13 @@ class MapVC: UIViewController {
         setupMapView()
         setupViews()
         setupContraints()
+        
     }
 
     // MARK: Properties -
     lazy var searchView: SearchView = {
         let v = SearchView(frame: .zero)
+        v.searchTextField.inputAccessoryView = createToolBar()
         return v
     }()
 
@@ -60,10 +62,9 @@ class MapVC: UIViewController {
         view.pinToEdges(to: mapView)
         
         // marker
-        
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.title = ""
+        marker.snippet = ""
         marker.map = mapView
         
         //circle
@@ -89,6 +90,7 @@ class MapVC: UIViewController {
     }
 }
 
+// MARK: CLLocationManagerDelegate -
 extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
@@ -99,7 +101,7 @@ extension MapVC: CLLocationManagerDelegate {
     }
 }
 
-
+// MARK: GMSMapViewDelegate -
 extension MapVC : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
 //        circle.map = nil
@@ -111,5 +113,31 @@ extension MapVC : GMSMapViewDelegate {
 //        circle.strokeColor = .init(hex: "#39A2C4")
 //        circle.strokeWidth = 2.0
 //        circle.map = mapView
+    }
+}
+
+// MARK: UIToolbar -
+extension MapVC {
+    func createToolBar() -> UIToolbar{
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let labelButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        labelButton.setTitle("Done", for: .normal)
+        labelButton.setTitleColor(.black, for: .normal)
+        labelButton.titleLabel?.font = custom(name: .medium, size: 18, style: .headline)
+        labelButton.addTarget(self, action: #selector(onDone), for: .primaryActionTriggered)
+        let doneBarItem = UIBarButtonItem(customView: labelButton)
+        doneBarItem.tintColor = UIColor.black
+        toolbar.setItems([space1,space2,doneBarItem], animated: true)
+        return toolbar
+    }
+    
+    @objc func onDone(){
+        let textField = searchView.searchTextField
+        if textField.isFirstResponder{
+            textField.resignFirstResponder()
+        }
     }
 }

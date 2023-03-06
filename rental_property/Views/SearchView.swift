@@ -35,7 +35,8 @@ class SearchView: UIView {
         tf.placeholder = "Search property or location"
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
-        tf.font = custom(name: .medium, size: 18, style: .caption1)
+        tf.textColor = .init(hex: Color.grey.rawValue)
+        tf.font = custom(name: .medium, size: 17, style: .caption1)
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
     }()
@@ -56,8 +57,8 @@ class SearchView: UIView {
         NSLayoutConstraint.activate([
             searchBtn.centerYAnchor.constraint(equalTo: centerYAnchor),
             searchBtn.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            searchBtn.widthAnchor.constraint(equalToConstant: 22),
-            searchBtn.heightAnchor.constraint(equalToConstant: 22),
+            searchBtn.widthAnchor.constraint(equalToConstant: 20),
+            searchBtn.heightAnchor.constraint(equalToConstant: 20),
             
             searchTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
             searchTextField.leadingAnchor.constraint(equalTo: searchBtn.trailingAnchor, constant: 8),
@@ -66,8 +67,8 @@ class SearchView: UIView {
             
             filterBtn.centerYAnchor.constraint(equalTo: centerYAnchor),
             filterBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            filterBtn.widthAnchor.constraint(equalToConstant: 22),
-            filterBtn.heightAnchor.constraint(equalToConstant: 22),
+            filterBtn.widthAnchor.constraint(equalToConstant: 20),
+            filterBtn.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
 }
