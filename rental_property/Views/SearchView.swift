@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol DidTapFilterButtonDelegate : AnyObject {
+    func didTapFilterButton()
+}
 class SearchView: UIView {
 
+    weak var delegate: DidTapFilterButtonDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -43,11 +48,12 @@ class SearchView: UIView {
     lazy var filterBtn: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "setting")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        btn.addTarget(self, action: #selector(handleFilterTap), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
 
-
+    
     func setupViews(){
         [searchBtn,searchTextField,filterBtn].forEach { item in
             addSubview(item)
@@ -70,5 +76,9 @@ class SearchView: UIView {
             filterBtn.widthAnchor.constraint(equalToConstant: 20),
             filterBtn.heightAnchor.constraint(equalToConstant: 20),
         ])
+    }
+    
+    @objc func handleFilterTap(){
+        delegate?.didTapFilterButton()
     }
 }

@@ -20,6 +20,10 @@
 		65103AE529B54C1800394473 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AE429B54C1800394473 /* UIColor+Ext.swift */; };
 		65103AE729B5795B00394473 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = 65103AE629B56F8900394473 /* map.json */; };
 		65103AE929B57C2B00394473 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AE829B57C2B00394473 /* SearchView.swift */; };
+		65103AEE29B6384F00394473 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AED29B6384F00394473 /* MockData.swift */; };
+		65103AF029B63E7F00394473 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AEF29B63E7F00394473 /* ProfileView.swift */; };
+		65103AF229B6425200394473 /* GPSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF129B6425200394473 /* GPSView.swift */; };
+		65103AF529B644C100394473 /* MapVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF429B644C100394473 /* MapVC+Delegates.swift */; };
 		65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE029B53F510022AF4F /* AppDelegate.swift */; };
 		65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE229B53F510022AF4F /* SceneDelegate.swift */; };
 		65C43EE529B53F510022AF4F /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE429B53F510022AF4F /* MapVC.swift */; };
@@ -44,6 +48,10 @@
 		65103AE429B54C1800394473 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		65103AE629B56F8900394473 /* map.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
 		65103AE829B57C2B00394473 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		65103AED29B6384F00394473 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		65103AEF29B63E7F00394473 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		65103AF129B6425200394473 /* GPSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSView.swift; sourceTree = "<group>"; };
+		65103AF429B644C100394473 /* MapVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Delegates.swift"; sourceTree = "<group>"; };
 		65C43EDD29B53F510022AF4F /* rental_property.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rental_property.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C43EE029B53F510022AF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C43EE229B53F510022AF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +77,7 @@
 		65103AC729B540EA00394473 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				65C43EE429B53F510022AF4F /* MapVC.swift */,
+				65103AF329B644B000394473 /* Map */,
 				65103AE229B54C0400394473 /* FilterVC.swift */,
 			);
 			path = Controllers;
@@ -90,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				65103AE829B57C2B00394473 /* SearchView.swift */,
+				65103AEF29B63E7F00394473 /* ProfileView.swift */,
+				65103AF129B6425200394473 /* GPSView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +139,23 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		65103AEC29B6383D00394473 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65103AED29B6384F00394473 /* MockData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65103AF329B644B000394473 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				65C43EE429B53F510022AF4F /* MapVC.swift */,
+				65103AF429B644C100394473 /* MapVC+Delegates.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		65C43ED429B53F510022AF4F = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +177,7 @@
 		65C43EDF29B53F510022AF4F /* rental_property */ = {
 			isa = PBXGroup;
 			children = (
+				65103AEC29B6383D00394473 /* Models */,
 				65103ACD29B5419500394473 /* Constants */,
 				65103ACC29B5418300394473 /* Files */,
 				65103ACB29B5410D00394473 /* Cells */,
@@ -304,14 +332,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				65103AE929B57C2B00394473 /* SearchView.swift in Sources */,
+				65103AF229B6425200394473 /* GPSView.swift in Sources */,
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
 				65103AE129B548B100394473 /* UIFont+Ext.swift in Sources */,
 				65103AE529B54C1800394473 /* UIColor+Ext.swift in Sources */,
+				65103AF029B63E7F00394473 /* ProfileView.swift in Sources */,
 				65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */,
 				65C43EE529B53F510022AF4F /* MapVC.swift in Sources */,
+				65103AF529B644C100394473 /* MapVC+Delegates.swift in Sources */,
 				65103ADF29B5443500394473 /* UIViewController+Ext.swift in Sources */,
 				65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */,
 				65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */,
+				65103AEE29B6384F00394473 /* MockData.swift in Sources */,
 				65103ADD29B5432400394473 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

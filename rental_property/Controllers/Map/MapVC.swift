@@ -15,6 +15,7 @@ class MapVC: UIViewController {
     var circle = GMSCircle()
     var mapView = GMSMapView()
     var marker = GMSMarker()
+    let data = Marker.data
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         .darkContent
@@ -38,6 +39,17 @@ class MapVC: UIViewController {
         v.searchTextField.inputAccessoryView = createToolBar()
         return v
     }()
+    
+    lazy var profileView: ProfileView = {
+        let v = ProfileView(frame: .zero)
+        return v
+    }()
+
+    lazy var gpsView: GPSView = {
+        let v = GPSView(frame: .zero)
+        v.delegate = self
+        return v
+    }()
 
     func setupMapView(){
         // mapview
@@ -45,8 +57,11 @@ class MapVC: UIViewController {
         mapView = GMSMapView(frame: self.view.frame, camera: camera)
         mapView.delegate = self
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.isMyLocationEnabled = true
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = false
         
-        
+        // custom map style
         do{
             if let url = Bundle.main.url(forResource: "map", withExtension: "json") {
                 mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: url)
@@ -67,18 +82,22 @@ class MapVC: UIViewController {
         marker.snippet = ""
         marker.map = mapView
         
-        //circle
-        circle.map = nil
-        let point = mapView.center
-        circle.position = mapView.projection.coordinate(for: point)
-        circle.fillColor = UIColor.green.withAlphaComponent(0.5)
-        circle.strokeColor = .blue
-        circle.strokeWidth = 2
-        circle.map = mapView
+        //show markers
+        let markerIcon = UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal)
+            .withConfiguration(UIImage.SymbolConfiguration(pointSize: 25))
+        
+        for item in data {
+            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng))
+            marker.title = item.name
+            marker.icon = markerIcon
+            marker.map = mapView
+        }
     }
     func setupViews(){
         view.addSubview(searchView)
         mapView.bringSubviewToFront(searchView)
+        view.addSubview(profileView)
+        view.addSubview(gpsView)
     }
     func setupContraints(){
         NSLayoutConstraint.activate([
@@ -86,6 +105,16 @@ class MapVC: UIViewController {
             searchView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             searchView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             searchView.heightAnchor.constraint(equalToConstant: 58),
+            
+            profileView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            profileView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            profileView.heightAnchor.constraint(equalToConstant: 58),
+            profileView.widthAnchor.constraint(equalToConstant: 58),
+            
+            gpsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
+            gpsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            gpsView.heightAnchor.constraint(equalToConstant: 58),
+            gpsView.widthAnchor.constraint(equalToConstant: 58),
         ])
     }
 }
@@ -95,24 +124,16 @@ extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         let coordinate = location.coordinate
-        
-        mapView.camera = .init(latitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 15.0, bearing: 10, viewingAngle: 45)
+        mapView.camera = .init(latitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 15.0, bearing: 0, viewingAngle: 10)
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 }
 
-// MARK: GMSMapViewDelegate -
+// MARK: GMSMapViewDelegate-
 extension MapVC : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-//        circle.map = nil
-//
-//        let point = mapView.center
-//        circle.position = mapView.projection.coordinate(for: point)
-//        circle.radius = 1000.0
-//        circle.fillColor = .init(hex: "#39A2C4")
-//        circle.strokeColor = .init(hex: "#39A2C4")
-//        circle.strokeWidth = 2.0
-//        circle.map = mapView
+        let location = mapView.myLocation?.coordinate
+        print("DEBUG:My location\n \(location)")
     }
 }
 
@@ -139,5 +160,11 @@ extension MapVC {
         if textField.isFirstResponder{
             textField.resignFirstResponder()
         }
+    }
+}
+
+extension MapVC: DidTapGPSDelegate {
+    func didTapGPS() {
+        print("Did tap me")
     }
 }
