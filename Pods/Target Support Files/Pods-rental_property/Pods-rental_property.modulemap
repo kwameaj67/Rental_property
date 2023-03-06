@@ -1,0 +1,6 @@
+framework module Pods_rental_property {
+  umbrella header "Pods-rental_property-umbrella.h"
+
+  export *
+  module * { export * }
+}
