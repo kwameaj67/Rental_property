@@ -24,6 +24,8 @@
 		65103AF029B63E7F00394473 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AEF29B63E7F00394473 /* ProfileView.swift */; };
 		65103AF229B6425200394473 /* GPSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF129B6425200394473 /* GPSView.swift */; };
 		65103AF529B644C100394473 /* MapVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF429B644C100394473 /* MapVC+Delegates.swift */; };
+		65103AF829B67A6C00394473 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF729B67A6C00394473 /* Helpers.swift */; };
+		65103AFA29B6804900394473 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF929B6804900394473 /* InfoView.swift */; };
 		65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE029B53F510022AF4F /* AppDelegate.swift */; };
 		65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE229B53F510022AF4F /* SceneDelegate.swift */; };
 		65C43EE529B53F510022AF4F /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE429B53F510022AF4F /* MapVC.swift */; };
@@ -52,6 +54,8 @@
 		65103AEF29B63E7F00394473 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		65103AF129B6425200394473 /* GPSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSView.swift; sourceTree = "<group>"; };
 		65103AF429B644C100394473 /* MapVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Delegates.swift"; sourceTree = "<group>"; };
+		65103AF729B67A6C00394473 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		65103AF929B6804900394473 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		65C43EDD29B53F510022AF4F /* rental_property.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rental_property.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C43EE029B53F510022AF4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C43EE229B53F510022AF4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				65103AE829B57C2B00394473 /* SearchView.swift */,
 				65103AEF29B63E7F00394473 /* ProfileView.swift */,
 				65103AF129B6425200394473 /* GPSView.swift */,
+				65103AF929B6804900394473 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +161,14 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		65103AF629B67A5000394473 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65103AF729B67A6C00394473 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		65C43ED429B53F510022AF4F = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,7 @@
 		65C43EDF29B53F510022AF4F /* rental_property */ = {
 			isa = PBXGroup;
 			children = (
+				65103AF629B67A5000394473 /* Helpers */,
 				65103AEC29B6383D00394473 /* Models */,
 				65103ACD29B5419500394473 /* Constants */,
 				65103ACC29B5418300394473 /* Files */,
@@ -331,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65103AFA29B6804900394473 /* InfoView.swift in Sources */,
 				65103AE929B57C2B00394473 /* SearchView.swift in Sources */,
 				65103AF229B6425200394473 /* GPSView.swift in Sources */,
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
@@ -344,6 +359,7 @@
 				65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */,
 				65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */,
 				65103AEE29B6384F00394473 /* MockData.swift in Sources */,
+				65103AF829B67A6C00394473 /* Helpers.swift in Sources */,
 				65103ADD29B5432400394473 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

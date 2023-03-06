@@ -10,7 +10,7 @@ import Foundation
 
 
 struct Marker {
-    var name: String
+    dynamic var name: String
     var lat: Double
     var lng: Double
     

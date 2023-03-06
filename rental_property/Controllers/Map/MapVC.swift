@@ -12,6 +12,7 @@ import CoreLocation
 class MapVC: UIViewController {
 
     let manager = CLLocationManager()
+    var coordinate = CLLocationCoordinate2D()
     var circle = GMSCircle()
     var mapView = GMSMapView()
     var marker = GMSMarker()
@@ -50,6 +51,13 @@ class MapVC: UIViewController {
         v.delegate = self
         return v
     }()
+    let markerLbl: UILabel = {
+        let lbl = UILabel(frame: .zero)
+        lbl.textColor = .black
+        lbl.font = custom(name: .medium, size: 16, style: .caption1)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
 
     func setupMapView(){
         // mapview
@@ -78,27 +86,33 @@ class MapVC: UIViewController {
         
         // marker
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = ""
-        marker.snippet = ""
+        marker.tracksInfoWindowChanges = true
         marker.map = mapView
         
         //show markers
-        let markerIcon = UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal)
-            .withConfiguration(UIImage.SymbolConfiguration(pointSize: 25))
+        let infoView = InfoView(frame: .zero)
+        mapView.addSubview(infoView)
+        infoView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        infoView.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
-        for item in data {
+        data.map { item in
             let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng))
             marker.title = item.name
-            marker.icon = markerIcon
+            infoView.titleLbl.text = item.name
+            
+            print("DEBUG:Labels \(infoView.titleLbl.text)")
+            marker.iconView = infoView
             marker.map = mapView
         }
     }
+    
     func setupViews(){
         view.addSubview(searchView)
         mapView.bringSubviewToFront(searchView)
         view.addSubview(profileView)
         view.addSubview(gpsView)
     }
+    
     func setupContraints(){
         NSLayoutConstraint.activate([
             searchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
@@ -123,7 +137,7 @@ class MapVC: UIViewController {
 extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
-        let coordinate = location.coordinate
+        coordinate = location.coordinate
         mapView.camera = .init(latitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 15.0, bearing: 0, viewingAngle: 10)
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
@@ -131,10 +145,7 @@ extension MapVC: CLLocationManagerDelegate {
 
 // MARK: GMSMapViewDelegate-
 extension MapVC : GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        let location = mapView.myLocation?.coordinate
-        print("DEBUG:My location\n \(location)")
-    }
+   
 }
 
 // MARK: UIToolbar -
@@ -163,8 +174,12 @@ extension MapVC {
     }
 }
 
+// MARK: DidTapGPSDelegate - 
 extension MapVC: DidTapGPSDelegate {
     func didTapGPS() {
-        print("Did tap me")
+        print("DEBUG: hanlding didTapGPS...")
+        let position = GMSCameraPosition(latitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 15.0, bearing: 0, viewingAngle: 10)
+        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        mapView.animate(to: position)
     }
 }
