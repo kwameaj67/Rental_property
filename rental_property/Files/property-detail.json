@@ -1,0 +1,53 @@
+[
+    {
+        "location_id": 1,
+        "location":"Woldsend, England",
+        "sleeps": 6,
+        "description":"Situated in the picturesque area called Breckland in South Norfolk. Woldsend is location in one of the driest terrains in the UK."
+        "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
+        "guests":10,
+        "price":150,
+        "image_url":"",
+    },
+    {
+        "location_id": 2,
+        "location":"Woldsend, England",
+        "sleeps": 6,
+        "description":"Situated in the picturesque area called Breckland in South Norfolk. Woldsend is location in one of the driest terrains in the UK."
+        "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
+        "guests":10,
+        "price":150,
+        "image_url":"",
+    },
+    {
+        "location_id": 3,
+        "location":"Woldsend, England",
+        "sleeps": 6,
+        "description":"Situated in the picturesque area called Breckland in South Norfolk. Woldsend is location in one of the driest terrains in the UK."
+        "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
+        "guests":10,
+        "price":150,
+        "image_url":"",
+    },
+    {
+        "location_id": 4,
+        "location":"Woldsend, England",
+        "sleeps": 6,
+        "description":"Situated in the picturesque area called Breckland in South Norfolk. Woldsend is location in one of the driest terrains in the UK."
+        "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
+        "guests":10,
+        "price":150,
+        "image_url":"",
+    },
+    {
+        "location_id": 5,
+        "location":"Woldsend, England",
+        "sleeps": 6,
+        "description":"Situated in the picturesque area called Breckland in South Norfolk. Woldsend is location in one of the driest terrains in the UK."
+        "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
+        "guests":10,
+        "price":150,
+        "image_url":"",
+    }
+    
+]
