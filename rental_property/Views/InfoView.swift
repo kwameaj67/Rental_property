@@ -10,23 +10,29 @@ import UIKit
 
 class InfoView: UIView {
  
+    var markerDetail: Marker? {
+        didSet{
+            titleLbl.text = markerDetail?.name
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .none
         translatesAutoresizingMaskIntoConstraints = false
         addSubview(icon)
-        addSubview(titleLbl)
+//        addSubview(titleLbl)
         
         
         NSLayoutConstraint.activate([
             icon.topAnchor.constraint(equalTo: topAnchor, constant: 2),
             icon.centerXAnchor.constraint(equalTo: centerXAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 20),
-            icon.heightAnchor.constraint(equalToConstant: 20),
+            icon.widthAnchor.constraint(equalToConstant: 35),
+            icon.heightAnchor.constraint(equalToConstant: 35),
             
-            titleLbl.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -2),
-            titleLbl.leadingAnchor.constraint(equalTo: leadingAnchor),
-            titleLbl.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            titleLbl.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -2),
+//            titleLbl.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            titleLbl.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
     }
     

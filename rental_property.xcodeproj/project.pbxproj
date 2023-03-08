@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */; };
+		650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */; };
 		65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103ACE29B541B000394473 /* UIView+Ext.swift */; };
 		65103AD529B5424600394473 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD129B5421900394473 /* Outfit-Bold.ttf */; };
 		65103AD629B5424600394473 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD029B5421900394473 /* Outfit-Light.ttf */; };
@@ -37,6 +39,10 @@
 /* Begin PBXFileReference section */
 		0AA1F2086AF7E0853DDD8D49 /* Pods-rental_property.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rental_property.debug.xcconfig"; path = "Target Support Files/Pods-rental_property/Pods-rental_property.debug.xcconfig"; sourceTree = "<group>"; };
 		48D87E5361B9019C1D0D6DD4 /* Pods_rental_property.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rental_property.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		650A4F2A29B914B20050B6B3 /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		650A4F2B29B9160B0050B6B3 /* property-detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "property-detail.json"; sourceTree = "<group>"; };
+		650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocation.swift; sourceTree = "<group>"; };
+		650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetail.swift; sourceTree = "<group>"; };
 		65103ACE29B541B000394473 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		65103AD029B5421900394473 /* Outfit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Light.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		65103AD129B5421900394473 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Bold.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Bold.ttf"; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 				65103AD229B5421A00394473 /* Outfit-Regular.ttf */,
 				65103AD329B5421A00394473 /* Outfit-SemiBold.ttf */,
 				65103AE629B56F8900394473 /* map.json */,
+				650A4F2B29B9160B0050B6B3 /* property-detail.json */,
+				650A4F2A29B914B20050B6B3 /* locations.json */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -148,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				65103AED29B6384F00394473 /* MockData.swift */,
+				650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */,
+				650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,10 +356,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65103AFA29B6804900394473 /* InfoView.swift in Sources */,
+				650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */,
 				65103AE929B57C2B00394473 /* SearchView.swift in Sources */,
 				65103AF229B6425200394473 /* GPSView.swift in Sources */,
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
 				65103AE129B548B100394473 /* UIFont+Ext.swift in Sources */,
+				650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */,
 				65103AE529B54C1800394473 /* UIColor+Ext.swift in Sources */,
 				65103AF029B63E7F00394473 /* ProfileView.swift in Sources */,
 				65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */,
