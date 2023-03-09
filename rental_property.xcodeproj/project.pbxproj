@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */; };
 		650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */; };
+		650A4F3429BA03EC0050B6B3 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3329BA03EC0050B6B3 /* FilterHeaderView.swift */; };
+		650A4F3729BA06BA0050B6B3 /* FilterVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3629BA06BA0050B6B3 /* FilterVC+Delegates.swift */; };
 		65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103ACE29B541B000394473 /* UIView+Ext.swift */; };
 		65103AD529B5424600394473 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD129B5421900394473 /* Outfit-Bold.ttf */; };
 		65103AD629B5424600394473 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD029B5421900394473 /* Outfit-Light.ttf */; };
@@ -43,6 +45,8 @@
 		650A4F2B29B9160B0050B6B3 /* property-detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "property-detail.json"; sourceTree = "<group>"; };
 		650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocation.swift; sourceTree = "<group>"; };
 		650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetail.swift; sourceTree = "<group>"; };
+		650A4F3329BA03EC0050B6B3 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
+		650A4F3629BA06BA0050B6B3 /* FilterVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterVC+Delegates.swift"; sourceTree = "<group>"; };
 		65103ACE29B541B000394473 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		65103AD029B5421900394473 /* Outfit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Light.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		65103AD129B5421900394473 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Bold.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Bold.ttf"; sourceTree = "<group>"; };
@@ -84,11 +88,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		650A4F3129BA03A40050B6B3 /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				65103AEF29B63E7F00394473 /* ProfileView.swift */,
+				65103AE829B57C2B00394473 /* SearchView.swift */,
+				65103AF129B6425200394473 /* GPSView.swift */,
+				65103AF929B6804900394473 /* InfoView.swift */,
+			);
+			path = MapVC;
+			sourceTree = "<group>";
+		};
+		650A4F3229BA03BC0050B6B3 /* FilterVC */ = {
+			isa = PBXGroup;
+			children = (
+				650A4F3329BA03EC0050B6B3 /* FilterHeaderView.swift */,
+			);
+			path = FilterVC;
+			sourceTree = "<group>";
+		};
+		650A4F3529BA06A70050B6B3 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				65103AE229B54C0400394473 /* FilterVC.swift */,
+				650A4F3629BA06BA0050B6B3 /* FilterVC+Delegates.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		65103AC729B540EA00394473 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				650A4F3529BA06A70050B6B3 /* Filter */,
 				65103AF329B644B000394473 /* Map */,
-				65103AE229B54C0400394473 /* FilterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,10 +139,8 @@
 		65103AC929B5410100394473 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				65103AE829B57C2B00394473 /* SearchView.swift */,
-				65103AEF29B63E7F00394473 /* ProfileView.swift */,
-				65103AF129B6425200394473 /* GPSView.swift */,
-				65103AF929B6804900394473 /* InfoView.swift */,
+				650A4F3229BA03BC0050B6B3 /* FilterVC */,
+				650A4F3129BA03A40050B6B3 /* MapVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,6 +396,8 @@
 				65103AF029B63E7F00394473 /* ProfileView.swift in Sources */,
 				65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */,
 				65C43EE529B53F510022AF4F /* MapVC.swift in Sources */,
+				650A4F3729BA06BA0050B6B3 /* FilterVC+Delegates.swift in Sources */,
+				650A4F3429BA03EC0050B6B3 /* FilterHeaderView.swift in Sources */,
 				65103AF529B644C100394473 /* MapVC+Delegates.swift in Sources */,
 				65103ADF29B5443500394473 /* UIViewController+Ext.swift in Sources */,
 				65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */,
