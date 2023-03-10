@@ -26,9 +26,23 @@ class FilterVC: UIViewController {
         v.delegate = self
         return v
     }()
-
+    
+    lazy var tableView : UITableView = {
+        let tb = UITableView()
+        tb.backgroundColor = .none
+        tb.register(PriceTableViewCell.self, forCellReuseIdentifier: PriceTableViewCell.reusableID)
+        tb.delegate = self
+        tb.dataSource = self
+        tb.allowsSelection = false
+        tb.allowsMultipleSelection = false
+        tb.separatorInset = .zero
+        tb.separatorStyle = .none
+        tb.translatesAutoresizingMaskIntoConstraints = false
+        return tb
+    }()
     func setupViews(){
         view.addSubview(headerView)
+        view.addSubview(tableView)
     }
     
     func setupContraints(){
@@ -38,6 +52,10 @@ class FilterVC: UIViewController {
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             headerView.heightAnchor.constraint(equalToConstant: 75),
             
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 

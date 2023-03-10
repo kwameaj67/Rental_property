@@ -36,8 +36,8 @@ extension UIColor {
         return nil
     }
     
-    func custom(hexValue: Color) -> UIColor? {
-        return UIColor.init(hex: hexValue.rawValue)!
-    }
+//    func custom(hexValue: Color) -> UIColor? {
+//        return UIColor.init(hex: hexValue.rawValue)!
+//    }
    
 }

@@ -40,7 +40,7 @@ class SearchView: UIView {
         tf.placeholder = "Search property or location"
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
-        tf.textColor = .init(hex: Color.grey.rawValue)
+        tf.textColor = Color.grey
         tf.font = custom(name: .medium, size: 17, style: .caption1)
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf

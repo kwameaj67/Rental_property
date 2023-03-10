@@ -11,6 +11,10 @@
 		650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */; };
 		650A4F3429BA03EC0050B6B3 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3329BA03EC0050B6B3 /* FilterHeaderView.swift */; };
 		650A4F3729BA06BA0050B6B3 /* FilterVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3629BA06BA0050B6B3 /* FilterVC+Delegates.swift */; };
+		650A4F3A29BB9E9D0050B6B3 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3929BB9E9D0050B6B3 /* PriceTableViewCell.swift */; };
+		650A4F3C29BBA40A0050B6B3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3B29BBA40A0050B6B3 /* CustomTextField.swift */; };
+		650A4F3E29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3D29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift */; };
+		650A4F4029BBB4C00050B6B3 /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */; };
 		65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103ACE29B541B000394473 /* UIView+Ext.swift */; };
 		65103AD529B5424600394473 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD129B5421900394473 /* Outfit-Bold.ttf */; };
 		65103AD629B5424600394473 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD029B5421900394473 /* Outfit-Light.ttf */; };
@@ -47,6 +51,10 @@
 		650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetail.swift; sourceTree = "<group>"; };
 		650A4F3329BA03EC0050B6B3 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		650A4F3629BA06BA0050B6B3 /* FilterVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterVC+Delegates.swift"; sourceTree = "<group>"; };
+		650A4F3929BB9E9D0050B6B3 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		650A4F3B29BBA40A0050B6B3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		650A4F3D29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceTableViewCell.swift; sourceTree = "<group>"; };
+		650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		65103ACE29B541B000394473 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		65103AD029B5421900394473 /* Outfit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Light.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		65103AD129B5421900394473 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Bold.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Bold.ttf"; sourceTree = "<group>"; };
@@ -116,6 +124,16 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		650A4F3829BB9E7D0050B6B3 /* FilterVC */ = {
+			isa = PBXGroup;
+			children = (
+				650A4F3929BB9E9D0050B6B3 /* PriceTableViewCell.swift */,
+				650A4F3D29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift */,
+				650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */,
+			);
+			path = FilterVC;
+			sourceTree = "<group>";
+		};
 		65103AC729B540EA00394473 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +159,7 @@
 			children = (
 				650A4F3229BA03BC0050B6B3 /* FilterVC */,
 				650A4F3129BA03A40050B6B3 /* MapVC */,
+				650A4F3B29BBA40A0050B6B3 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +174,7 @@
 		65103ACB29B5410D00394473 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				650A4F3829BB9E7D0050B6B3 /* FilterVC */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -391,17 +411,21 @@
 				65103AF229B6425200394473 /* GPSView.swift in Sources */,
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
 				65103AE129B548B100394473 /* UIFont+Ext.swift in Sources */,
+				650A4F4029BBB4C00050B6B3 /* GuestTableViewCell.swift in Sources */,
 				650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */,
 				65103AE529B54C1800394473 /* UIColor+Ext.swift in Sources */,
 				65103AF029B63E7F00394473 /* ProfileView.swift in Sources */,
 				65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */,
 				65C43EE529B53F510022AF4F /* MapVC.swift in Sources */,
+				650A4F3A29BB9E9D0050B6B3 /* PriceTableViewCell.swift in Sources */,
+				650A4F3C29BBA40A0050B6B3 /* CustomTextField.swift in Sources */,
 				650A4F3729BA06BA0050B6B3 /* FilterVC+Delegates.swift in Sources */,
 				650A4F3429BA03EC0050B6B3 /* FilterHeaderView.swift in Sources */,
 				65103AF529B644C100394473 /* MapVC+Delegates.swift in Sources */,
 				65103ADF29B5443500394473 /* UIViewController+Ext.swift in Sources */,
 				65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */,
 				65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */,
+				650A4F3E29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift in Sources */,
 				65103AEE29B6384F00394473 /* MockData.swift in Sources */,
 				65103AF829B67A6C00394473 /* Helpers.swift in Sources */,
 				65103ADD29B5432400394473 /* Color.swift in Sources */,
