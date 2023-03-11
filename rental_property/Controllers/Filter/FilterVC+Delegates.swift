@@ -32,7 +32,7 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -46,6 +46,18 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
         }
+        else if indexPath.row == row.convenience_section.rawValue {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConvenienceTableViewCell.reusableID, for: indexPath) as? ConvenienceTableViewCell else {
+                fatalError("Cannot dequeue price cell")
+            }
+            return cell
+        }
+        else if indexPath.row == row.guests.rawValue {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: GuestTableViewCell.reusableID, for: indexPath) as? GuestTableViewCell else {
+                fatalError("Cannot dequeue price cell")
+            }
+            return cell
+        }
         return UITableViewCell()
     }
     
@@ -53,8 +65,21 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == row.price_section.rawValue {
             return CGFloat(200)
         }
+        else if indexPath.row == row.convenience_section.rawValue {
+            return CGFloat(300)
+        }
+        else if indexPath.row == row.guests.rawValue {
+            return CGFloat(150)
+        }
         return CGFloat()
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = FilterFooterView()
+        return view
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat(100)
+    }
 }

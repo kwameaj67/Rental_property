@@ -50,12 +50,14 @@ class PriceTableViewCell: UITableViewCell {
     lazy var fromTextField : CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "From"
+        tf.keyboardType = .numberPad
         return tf
     }()
     
     lazy var toTextField : CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "To"
+        tf.keyboardType = .numberPad
         return tf
     }()
     

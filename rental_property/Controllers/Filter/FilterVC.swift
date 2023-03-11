@@ -12,6 +12,7 @@ class FilterVC: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -28,13 +29,17 @@ class FilterVC: UIViewController {
     }()
     
     lazy var tableView : UITableView = {
-        let tb = UITableView()
+        let tb = UITableView(frame: .zero, style: .grouped)
         tb.backgroundColor = .none
         tb.register(PriceTableViewCell.self, forCellReuseIdentifier: PriceTableViewCell.reusableID)
+        tb.register(ConvenienceTableViewCell.self, forCellReuseIdentifier: ConvenienceTableViewCell.reusableID)
+        tb.register(GuestTableViewCell.self, forCellReuseIdentifier: GuestTableViewCell.reusableID)
+        tb.register(FilterFooterView.self, forHeaderFooterViewReuseIdentifier: FilterFooterView.reusableID)
         tb.delegate = self
         tb.dataSource = self
         tb.allowsSelection = false
         tb.allowsMultipleSelection = false
+        tb.showsVerticalScrollIndicator = false
         tb.separatorInset = .zero
         tb.separatorStyle = .none
         tb.translatesAutoresizingMaskIntoConstraints = false

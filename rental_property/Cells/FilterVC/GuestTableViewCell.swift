@@ -11,15 +11,102 @@ class GuestTableViewCell: UITableViewCell {
 
     static let reusableID = "GuestTableViewCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: GuestTableViewCell.reusableID)
+        setupViews()
+        setupContraints()
+        backgroundColor = .white
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    // MARK: Properties -
+    lazy var headingLbl: UILabel = {
+        let lbl = UILabel(frame: .zero)
+        lbl.text = "Number of guests"
+        lbl.textColor = .black
+        lbl.font = custom(name: .bold, size: 20, style: .caption1)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    lazy var stackView: UIStackView = {
+        let sv = UIStackView(frame: .zero)
+        sv.spacing = 10
+        sv.axis = .horizontal
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        return sv
+    }()
+    
+    lazy var minusBtn: UIButton = {
+        let btn = UIButton()
+        btn.setImage(UIImage(systemName: "minus")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 22)), for: .normal)
+        btn.tintColor = .black
+        btn.backgroundColor = Color.grey
+        btn.layer.cornerRadius = 20
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    lazy var plusBtn: UIButton = {
+        let btn = UIButton()
+        btn.setImage(UIImage(systemName: "plus")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 22)), for: .normal)
+        btn.tintColor = .black
+        btn.backgroundColor = Color.grey
+        btn.layer.cornerRadius = 20
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    let numberView: UIView = {
+        let v = UIView(frame: .zero)
+        v.backgroundColor = Color.grey
+        v.layer.cornerRadius = 20
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    let numberLbl: UILabel = {
+        let lbl = UILabel(frame: .zero)
+        lbl.text = "1"
+        lbl.textColor = .black
+        lbl.font = custom(name: .medium, size: 18, style: .caption1)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
 
-        // Configure the view for the selected state
+
+    func setupViews(){
+        contentView.addSubview(headingLbl)
+        contentView.addSubview(stackView)
+        numberView.addSubview(numberLbl)
+        [minusBtn,numberView,plusBtn].forEach { item in
+            stackView.addArrangedSubview(item)
+        }
+    }
+    func setupContraints(){
+        NSLayoutConstraint.activate([
+            headingLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            headingLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            headingLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            
+            stackView.topAnchor.constraint(equalTo: headingLbl.bottomAnchor, constant: 20),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            stackView.heightAnchor.constraint(equalToConstant: 60),
+            
+            minusBtn.heightAnchor.constraint(equalTo: stackView.heightAnchor),
+            minusBtn.widthAnchor.constraint(equalTo: stackView.widthAnchor,multiplier: 0.2),
+            plusBtn.heightAnchor.constraint(equalTo: stackView.heightAnchor),
+            plusBtn.widthAnchor.constraint(equalTo: stackView.widthAnchor,multiplier: 0.2),
+            
+            numberView.heightAnchor.constraint(equalTo: stackView.heightAnchor),
+            
+            numberLbl.centerYAnchor.constraint(equalTo: numberView.centerYAnchor),
+            numberLbl.centerXAnchor.constraint(equalTo: numberView.centerXAnchor),
+
+        ])
     }
 
 }
