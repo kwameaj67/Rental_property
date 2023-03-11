@@ -15,6 +15,8 @@
 		650A4F3C29BBA40A0050B6B3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3B29BBA40A0050B6B3 /* CustomTextField.swift */; };
 		650A4F3E29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3D29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift */; };
 		650A4F4029BBB4C00050B6B3 /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */; };
+		650A4F4429BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F4329BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift */; };
+		650A4F4829BD2DBE0050B6B3 /* FilterFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F4729BD2DBE0050B6B3 /* FilterFooterView.swift */; };
 		65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103ACE29B541B000394473 /* UIView+Ext.swift */; };
 		65103AD529B5424600394473 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD129B5421900394473 /* Outfit-Bold.ttf */; };
 		65103AD629B5424600394473 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD029B5421900394473 /* Outfit-Light.ttf */; };
@@ -55,6 +57,8 @@
 		650A4F3B29BBA40A0050B6B3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		650A4F3D29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceTableViewCell.swift; sourceTree = "<group>"; };
 		650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
+		650A4F4329BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		650A4F4729BD2DBE0050B6B3 /* FilterFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFooterView.swift; sourceTree = "<group>"; };
 		65103ACE29B541B000394473 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		65103AD029B5421900394473 /* Outfit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Light.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		65103AD129B5421900394473 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Bold.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Bold.ttf"; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				650A4F3929BB9E9D0050B6B3 /* PriceTableViewCell.swift */,
 				650A4F3D29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift */,
 				650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */,
+				650A4F4329BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift */,
+				650A4F4729BD2DBE0050B6B3 /* FilterFooterView.swift */,
 			);
 			path = FilterVC;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				65C43EDA29B53F510022AF4F /* Frameworks */,
 				65C43EDB29B53F510022AF4F /* Resources */,
 				8193E32774DD00D235875247 /* [CP] Copy Pods Resources */,
+				1464F447DEEF6D50C4BB9433 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +366,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1464F447DEEF6D50C4BB9433 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rental_property/Pods-rental_property-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rental_property/Pods-rental_property-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rental_property/Pods-rental_property-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8193E32774DD00D235875247 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,7 +434,9 @@
 				65103AE929B57C2B00394473 /* SearchView.swift in Sources */,
 				65103AF229B6425200394473 /* GPSView.swift in Sources */,
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
+				650A4F4829BD2DBE0050B6B3 /* FilterFooterView.swift in Sources */,
 				65103AE129B548B100394473 /* UIFont+Ext.swift in Sources */,
+				650A4F4429BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift in Sources */,
 				650A4F4029BBB4C00050B6B3 /* GuestTableViewCell.swift in Sources */,
 				650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */,
 				65103AE529B54C1800394473 /* UIColor+Ext.swift in Sources */,

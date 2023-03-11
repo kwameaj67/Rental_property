@@ -1,4 +1,5 @@
 PODS:
+  - AlignedCollectionViewFlowLayout (1.1.2)
   - GoogleMaps (7.4.0):
     - GoogleMaps/Maps (= 7.4.0)
   - GoogleMaps/Base (7.4.0)
@@ -6,15 +7,18 @@ PODS:
     - GoogleMaps/Base
 
 DEPENDENCIES:
+  - AlignedCollectionViewFlowLayout
   - GoogleMaps (= 7.4.0)
 
 SPEC REPOS:
   trunk:
+    - AlignedCollectionViewFlowLayout
     - GoogleMaps
 
 SPEC CHECKSUMS:
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
 
-PODFILE CHECKSUM: f368929a80c406d41902308903782a1c156f8118
+PODFILE CHECKSUM: 7d045576a86de55c9152823e89e0629eca64a744
 
 COCOAPODS: 1.11.3
