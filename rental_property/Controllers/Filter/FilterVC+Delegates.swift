@@ -41,8 +41,8 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == row.price_section.rawValue {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.reusableID, for: indexPath) as? PriceTableViewCell else {
-                fatalError("Cannot dequeue price cell")
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.reusableID, for: indexPath) as? PriceTableViewCell  else {
+                fatalError("Cannot dequeue cell")
             }
             return cell
         }
@@ -83,3 +83,5 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
         return CGFloat(100)
     }
 }
+
+

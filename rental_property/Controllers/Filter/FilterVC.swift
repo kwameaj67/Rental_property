@@ -8,7 +8,7 @@
 import UIKit
 
 class FilterVC: UIViewController {
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
@@ -45,6 +45,7 @@ class FilterVC: UIViewController {
         tb.translatesAutoresizingMaskIntoConstraints = false
         return tb
     }()
+    
     func setupViews(){
         view.addSubview(headerView)
         view.addSubview(tableView)

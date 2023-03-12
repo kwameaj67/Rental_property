@@ -42,8 +42,10 @@ class ConvenienceTableViewCell: UITableViewCell {
     lazy var collectionView: UICollectionView = {
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
         alignedFlowLayout.horizontalAlignment = .left
-        alignedFlowLayout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20)
-        alignedFlowLayout.minimumLineSpacing = 15
+//        alignedFlowLayout.scrollDirection = .horizontal
+        alignedFlowLayout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        alignedFlowLayout.minimumLineSpacing = 8
+//        alignedFlowLayout.minimumInteritemSpacing  = 15
         alignedFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize //.init(width: 60, height: 60)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: alignedFlowLayout)
         cv.register(FeatureCollectionViewCell.self, forCellWithReuseIdentifier: FeatureCollectionViewCell.reusableID)
@@ -51,7 +53,7 @@ class ConvenienceTableViewCell: UITableViewCell {
         cv.delegate = self
         cv.dataSource = self
         cv.allowsSelection = true
-        cv.allowsMultipleSelection = false
+        cv.allowsMultipleSelection = true
         cv.isUserInteractionEnabled = true
         cv.bounces = true
         cv.showsHorizontalScrollIndicator = false
