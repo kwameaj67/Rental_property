@@ -41,6 +41,7 @@ class GPSView: UIView {
     }()
 
     @objc func handleTap(){
+        generateHapticTouch()
         delegate?.didTapGPS()
     }
     func setupViews(){

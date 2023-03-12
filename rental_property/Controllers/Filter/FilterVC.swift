@@ -9,6 +9,13 @@ import UIKit
 
 class FilterVC: UIViewController {
     
+    var guestNumber: Int = 1 {
+        didSet{
+            //print("DEBUG:  GuestNumber: \(guestNumber)")
+            tableView.reloadData()
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }

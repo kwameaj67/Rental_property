@@ -23,3 +23,9 @@ func sizeImage(_ originalImage:UIImage, scaledToSize:CGSize) -> UIImage {
     UIGraphicsEndImageContext()
     return image!
 }
+
+
+func generateHapticTouch(){
+    let generator = UIImpactFeedbackGenerator(style: .medium)
+    generator.impactOccurred()
+}

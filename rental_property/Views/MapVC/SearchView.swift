@@ -79,6 +79,7 @@ class SearchView: UIView {
     }
     
     @objc func handleFilterTap(){
+        generateHapticTouch()
         delegate?.didTapFilterButton()
     }
 }

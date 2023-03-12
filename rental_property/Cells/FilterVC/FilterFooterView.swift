@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol FilterFooterViewDelegate: AnyObject {
+    func didTapApplyBtn()
+}
+
 class FilterFooterView: UITableViewHeaderFooterView {
 
   static let reusableID = "FilterFooterView"
+    
+    weak var delegate: FilterFooterViewDelegate?
+    
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: FilterFooterView.reusableID)
         let bg_view = UIView()
@@ -36,9 +43,13 @@ class FilterFooterView: UITableViewHeaderFooterView {
         btn.setTitleColor(.white, for: .normal)
         btn.titleLabel?.font = custom(name: .semi_bold, size: 18, style: .caption1)
         btn.backgroundColor = Color.black
+        btn.addTarget(self, action: #selector(handleApplyBtn), for: .touchUpInside)
         btn.layer.cornerRadius = 20
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
 
+    @objc func handleApplyBtn(){
+        
+    }
 }

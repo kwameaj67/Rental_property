@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol GuestTableViewCellDelegate: AnyObject {
+    func didTapMinusBtn()
+    func didTapPlusBtn()
+}
+
 class GuestTableViewCell: UITableViewCell {
 
     static let reusableID = "GuestTableViewCell"
+    
+    weak var delegate: GuestTableViewCellDelegate?
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: GuestTableViewCell.reusableID)
@@ -47,6 +55,7 @@ class GuestTableViewCell: UITableViewCell {
         btn.tintColor = .black
         btn.backgroundColor = Color.grey
         btn.layer.cornerRadius = 20
+        btn.addTarget(self, action: #selector(handleMinusBtn), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -57,25 +66,34 @@ class GuestTableViewCell: UITableViewCell {
         btn.tintColor = .black
         btn.backgroundColor = Color.grey
         btn.layer.cornerRadius = 20
+        btn.addTarget(self, action: #selector(handlePlusBtn), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
-    let numberView: UIView = {
+    lazy var numberView: UIView = {
         let v = UIView(frame: .zero)
         v.backgroundColor = Color.grey
         v.layer.cornerRadius = 20
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
-    let numberLbl: UILabel = {
+    lazy var numberLbl: UILabel = {
         let lbl = UILabel(frame: .zero)
-        lbl.text = "1"
+        lbl.text = "\(1)"
         lbl.textColor = .black
         lbl.font = custom(name: .medium, size: 18, style: .caption1)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
 
+    // MARK: Selectors
+    @objc func handlePlusBtn(){
+        delegate?.didTapPlusBtn()
+    }
+    
+    @objc func handleMinusBtn(){
+        delegate?.didTapMinusBtn()
+    }
 
     func setupViews(){
         contentView.addSubview(headingLbl)
@@ -108,5 +126,7 @@ class GuestTableViewCell: UITableViewCell {
 
         ])
     }
+    
+    
 
 }

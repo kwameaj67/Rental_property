@@ -142,10 +142,12 @@ class PriceTableViewCell: UITableViewCell {
 extension PriceTableViewCell {
     func createToolBar() -> UIToolbar{
         lazy var toolbar = UIToolbar()
+        
+        print("width: \(toolbar.frame.width)")
         toolbar.sizeToFit()
         let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let labelButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let labelButton = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         labelButton.setTitle("Done", for: .normal)
         labelButton.setTitleColor(.black, for: .normal)
         labelButton.titleLabel?.font = custom(name: .medium, size: 18, style: .caption1)
@@ -157,6 +159,7 @@ extension PriceTableViewCell {
     }
     
     @objc func onDone(){
+        generateHapticTouch()
         if fromTextField.isFirstResponder{
             fromTextField.resignFirstResponder()
         }
@@ -186,6 +189,8 @@ extension PriceTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
         propertyTextField.text = propertyTypes[row]
         propertyTextField.resignFirstResponder()
     }

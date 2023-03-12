@@ -59,6 +59,7 @@ class FilterHeaderView: UIView {
 
     // MARK: Selectors -
     @objc func handleExitBtn(){
+        generateHapticTouch()
         delegate?.dismissVC()
     }
     

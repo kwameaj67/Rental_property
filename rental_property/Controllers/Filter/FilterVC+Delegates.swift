@@ -13,6 +13,7 @@ enum row: Int {
     case convenience_section = 1
     case guests = 2
 }
+// MARK: FilterHeaderViewDelegate -
 extension FilterVC: FilterHeaderViewDelegate {
     func dismissVC() {
         print("DEBUG: dismiss FilterVC")
@@ -56,6 +57,8 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: GuestTableViewCell.reusableID, for: indexPath) as? GuestTableViewCell else {
                 fatalError("Cannot dequeue price cell")
             }
+            cell.delegate = self
+            cell.numberLbl.text = "\(guestNumber)"
             return cell
         }
         return UITableViewCell()
@@ -85,3 +88,18 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 
+extension FilterVC: GuestTableViewCellDelegate {
+    func didTapMinusBtn() {
+        if guestNumber > 1 {
+            generateHapticTouch()
+            guestNumber -= 1
+        }
+    }
+    
+    func didTapPlusBtn() {
+        generateHapticTouch()
+        guestNumber += 1
+    }
+    
+    
+}
