@@ -109,7 +109,7 @@ class PriceTableViewCell: UITableViewCell {
     
     func setupContraints(){
         NSLayoutConstraint.activate([
-            headingLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            headingLbl.topAnchor.constraint(equalTo: contentView.topAnchor),
             headingLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             headingLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             
@@ -142,15 +142,13 @@ class PriceTableViewCell: UITableViewCell {
 extension PriceTableViewCell {
     func createToolBar() -> UIToolbar{
         lazy var toolbar = UIToolbar()
-        
-        print("width: \(toolbar.frame.width)")
         toolbar.sizeToFit()
         let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let labelButton = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         labelButton.setTitle("Done", for: .normal)
         labelButton.setTitleColor(.black, for: .normal)
-        labelButton.titleLabel?.font = custom(name: .medium, size: 18, style: .caption1)
+        labelButton.titleLabel?.font = custom(name: .medium, size: 18, style: .headline)
         labelButton.addTarget(self, action: #selector(onDone), for: .primaryActionTriggered)
         let doneBarItem = UIBarButtonItem(customView: labelButton)
         doneBarItem.tintColor = UIColor.black

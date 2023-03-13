@@ -42,10 +42,8 @@ class ConvenienceTableViewCell: UITableViewCell {
     lazy var collectionView: UICollectionView = {
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
         alignedFlowLayout.horizontalAlignment = .left
-//        alignedFlowLayout.scrollDirection = .horizontal
         alignedFlowLayout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
         alignedFlowLayout.minimumLineSpacing = 8
-//        alignedFlowLayout.minimumInteritemSpacing  = 15
         alignedFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize //.init(width: 60, height: 60)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: alignedFlowLayout)
         cv.register(FeatureCollectionViewCell.self, forCellWithReuseIdentifier: FeatureCollectionViewCell.reusableID)
@@ -94,7 +92,14 @@ extension ConvenienceTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         cell.lbl.text = features[indexPath.row]
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 90, height: 56)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        generateHapticTouch()
+        let cell = collectionView.cellForItem(at: indexPath) as! FeatureCollectionViewCell
+    }
+    
 }
