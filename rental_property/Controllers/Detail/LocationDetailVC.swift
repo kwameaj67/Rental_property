@@ -58,7 +58,7 @@ class LocationDetailVC: UIViewController {
     
     lazy var starBtn: UIButton = {
         let btn = UIButton()
-        let image = UIImage(named: "star")?.withRenderingMode(.alwaysTemplate)
+        let image = UIImage(named: "star")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 10))
         btn.setImage(image, for: .normal)
         btn.tintColor = .black
         btn.backgroundColor = .white
@@ -67,6 +67,13 @@ class LocationDetailVC: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
+    lazy var locationDetailView: LocationDetailView = {
+        let v = LocationDetailView(frame: .zero)
+        v.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        v.layer.cornerRadius = 30
+        return v
+    }()
+
 
 
     // MARK: Selectors
@@ -84,6 +91,7 @@ class LocationDetailVC: UIViewController {
         imageView.addSubview(locationImage)
         locationImage.addSubview(backBtn)
         locationImage.addSubview(starBtn)
+        container.addSubview(locationDetailView)
     }
     
     func setupConstraints(){
@@ -104,6 +112,11 @@ class LocationDetailVC: UIViewController {
             starBtn.trailingAnchor.constraint(equalTo: locationImage.trailingAnchor, constant: -20),
             starBtn.heightAnchor.constraint(equalToConstant: 45),
             starBtn.widthAnchor.constraint(equalToConstant: 45),
+            
+            locationDetailView.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            locationDetailView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            locationDetailView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            locationDetailView.heightAnchor.constraint(equalTo: container.heightAnchor, multiplier: 0.5),
         ])
     }
 }
