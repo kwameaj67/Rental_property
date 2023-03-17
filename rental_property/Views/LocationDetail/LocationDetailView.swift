@@ -26,7 +26,16 @@ class LocationDetailView: UIView {
     
     
     // MARK: Properties -
+    lazy var headingLbl: UILabel = {
+        let lbl = UILabel(frame: .zero)
+        lbl.text = "Voltand Cottages"
+        lbl.textColor = .black
+        lbl.font = custom(name: .semi_bold, size: 20, style: .headline)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
     
+
     func setupViews(){
         
     }

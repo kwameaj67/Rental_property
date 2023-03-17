@@ -17,6 +17,7 @@
 		650A4F4029BBB4C00050B6B3 /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */; };
 		650A4F4429BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F4329BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift */; };
 		650A4F4829BD2DBE0050B6B3 /* FilterFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F4729BD2DBE0050B6B3 /* FilterFooterView.swift */; };
+		650D805F29C4FA45001C82C8 /* Type+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650D805E29C4FA45001C82C8 /* Type+Ext.swift */; };
 		65103ACF29B541B000394473 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103ACE29B541B000394473 /* UIView+Ext.swift */; };
 		65103AD529B5424600394473 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD129B5421900394473 /* Outfit-Bold.ttf */; };
 		65103AD629B5424600394473 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65103AD029B5421900394473 /* Outfit-Light.ttf */; };
@@ -62,6 +63,7 @@
 		650A4F3F29BBB4C00050B6B3 /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		650A4F4329BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		650A4F4729BD2DBE0050B6B3 /* FilterFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFooterView.swift; sourceTree = "<group>"; };
+		650D805E29C4FA45001C82C8 /* Type+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Type+Ext.swift"; sourceTree = "<group>"; };
 		65103ACE29B541B000394473 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		65103AD029B5421900394473 /* Outfit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Light.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		65103AD129B5421900394473 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Outfit-Bold.ttf"; path = "../../../../../Downloads/outfit/fonts/ttf/Outfit-Bold.ttf"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				65103ADE29B5443500394473 /* UIViewController+Ext.swift */,
 				65103AE029B548B100394473 /* UIFont+Ext.swift */,
 				65103AE429B54C1800394473 /* UIColor+Ext.swift */,
+				650D805E29C4FA45001C82C8 /* Type+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */,
 				6588D60029BEEFF7001BFFC1 /* LocationDetailVC+Delegates.swift in Sources */,
 				65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */,
+				650D805F29C4FA45001C82C8 /* Type+Ext.swift in Sources */,
 				650A4F3E29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift in Sources */,
 				65103AEE29B6384F00394473 /* MockData.swift in Sources */,
 				65103AF829B67A6C00394473 /* Helpers.swift in Sources */,

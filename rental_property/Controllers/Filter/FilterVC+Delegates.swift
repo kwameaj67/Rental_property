@@ -13,6 +13,7 @@ enum row: Int {
     case convenience_section = 1
     case guests = 2
 }
+
 // MARK: FilterHeaderViewDelegate -
 extension FilterVC: FilterHeaderViewDelegate {
     func dismissVC() {
@@ -45,12 +46,14 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.reusableID, for: indexPath) as? PriceTableViewCell  else {
                 fatalError("Cannot dequeue cell")
             }
+            cell.delegate = self
             return cell
         }
         else if indexPath.row == row.convenience_section.rawValue {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ConvenienceTableViewCell.reusableID, for: indexPath) as? ConvenienceTableViewCell else {
                 fatalError("Cannot dequeue price cell")
             }
+            cell.delegate = self
             return cell
         }
         else if indexPath.row == row.guests.rawValue {
@@ -79,6 +82,7 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = FilterFooterView()
+        view.delegate = self
         return view
     }
     
@@ -87,18 +91,50 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: PriceTableViewCellDelegate -
+extension FilterVC: PriceTableViewCellDelegate{
+    func onChangeText(priceFrom: Double, priceTo: Double, propertyType: String) {
+        filter.priceFrom = priceFrom
+        filter.priceTo = priceTo
+        filter.propertyType = propertyType
+        
+        //print("PriceFrom: \(filter.priceFrom)\nPriceTo: \(filter.priceTo)\nPropertyType: \(filter.propertyType)\nGuests: \(filter.numberOfGuest)")
+    }
+}
 
+// MARK: ConvenienceTableViewCellDelegate -
+extension FilterVC: ConvenienceTableViewCellDelegate{
+    func selectConvenience(item: String) {
+        filter.conveniences.append(item)
+    }
+}
+
+// MARK: GuestTableViewCellDelegate -
 extension FilterVC: GuestTableViewCellDelegate {
     func didTapMinusBtn() {
         if guestNumber > 1 {
             generateHapticTouch()
             guestNumber -= 1
+            
         }
     }
     
     func didTapPlusBtn() {
         generateHapticTouch()
         guestNumber += 1
+    }
+}
+
+
+// MARK: FilterFooterViewDelegate -
+extension FilterVC: FilterFooterViewDelegate {
+    func didTapApplyBtn() {
+        dismiss(animated: true)
+        print("PriceFrom: \(filter.priceFrom)\nPriceTo: \(filter.priceTo)\nPropertyType: \(filter.propertyType)\nGuests: \(filter.numberOfGuest)")
+        
+        filter.conveniences.map({ item in
+            print("Conveniences: \(item)")
+        })
     }
     
     

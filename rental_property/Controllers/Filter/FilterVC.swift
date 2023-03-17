@@ -11,8 +11,14 @@ class FilterVC: UIViewController {
     
     var guestNumber: Int = 1 {
         didSet{
-            //print("DEBUG:  GuestNumber: \(guestNumber)")
             tableView.reloadData()
+            filter.numberOfGuest = guestNumber
+        }
+    }
+    
+    var filter = FilterCondition(){
+        didSet{
+            print("PriceFrom: \(filter.priceFrom)\nPriceTo: \(filter.priceTo)\nPropertyType: \(filter.propertyType)\nGuests: \(filter.numberOfGuest)\nConveniences: \(filter.conveniences)")
         }
     }
     

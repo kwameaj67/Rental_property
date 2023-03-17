@@ -6,11 +6,19 @@
 //
 
 import UIKit
+import Combine
 import AlignedCollectionViewFlowLayout
 
+protocol ConvenienceTableViewCellDelegate: AnyObject {
+    func selectConvenience(item: String)
+}
 
 class ConvenienceTableViewCell: UITableViewCell {
 
+    var conveniences = [String]()
+    
+    weak var delegate: ConvenienceTableViewCellDelegate?
+    
     static let reusableID = "ConvenienceTableViewCell"
     
     let features:[String] = ["In the woods","Lakes & Rivers","Views","Hot tubs","TV","Woodburner","Family Friendly"]
@@ -20,14 +28,14 @@ class ConvenienceTableViewCell: UITableViewCell {
         setupViews()
         setupContraints()
         backgroundColor = .white
+        
         // selects first item
-//        collectionView.selectItem(at: .init(row: 0, section: 0), animated: true, scrollPosition: .top)
+        // collectionView.selectItem(at: .init(row: 0, section: 0), animated: true, scrollPosition: .top)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     // MARK: Properties -
     lazy var headingLbl: UILabel = {
@@ -99,7 +107,9 @@ extension ConvenienceTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         generateHapticTouch()
-        let cell = collectionView.cellForItem(at: indexPath) as! FeatureCollectionViewCell
+        let _ = collectionView.cellForItem(at: indexPath) as! FeatureCollectionViewCell
+        let item = features[indexPath.row]
+        delegate?.selectConvenience(item: item)
     }
     
 }

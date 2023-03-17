@@ -7,8 +7,14 @@
 
 import UIKit
 
-class PriceTableViewCell: UITableViewCell {
+protocol PriceTableViewCellDelegate: AnyObject {
+    func onChangeText(priceFrom: Double, priceTo: Double, propertyType: String)
+}
 
+class PriceTableViewCell: UITableViewCell {
+        
+    weak var delegate: PriceTableViewCellDelegate?
+        
     static let reusableID = "PriceTableViewCell"
     
     let propertyTypes: [String] = ["Single-detached houses","Semi-detached houses", "Row houses", "Condominium apartments", "Mobile homes", "Other property types", "Properties with multiple residential units"]
@@ -47,6 +53,7 @@ class PriceTableViewCell: UITableViewCell {
     lazy var fromTextField : CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "From"
+        tf.delegate = self
         tf.keyboardType = .numberPad
         tf.inputAccessoryView = createToolBar()
         return tf
@@ -55,6 +62,7 @@ class PriceTableViewCell: UITableViewCell {
     lazy var toTextField : CustomTextField = {
         let tf = CustomTextField()
         tf.placeholder = "To"
+        tf.delegate = self
         tf.keyboardType = .numberPad
         tf.inputAccessoryView = createToolBar()
         return tf
@@ -73,6 +81,7 @@ class PriceTableViewCell: UITableViewCell {
         tf.textColor = .black
         tf.font = custom(name: .regular, size: 18, style: .caption1)
         tf.attributedPlaceholder = NSMutableAttributedString(string: "Property Type",attributes: [.font: custom(name: .regular, size: 15, style: .headline),.foregroundColor: UIColor.systemGray3])
+        tf.delegate = self
         tf.inputView = propertyPickerView
         tf.inputAccessoryView = createToolBar()
         tf.backgroundColor = .none
@@ -202,4 +211,13 @@ extension PriceTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
         return pickerLabel
     }
     
+}
+
+// MARK: UITextFieldDelegate -
+extension PriceTableViewCell: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let priceFrom = fromTextField.text, let priceTo = toTextField.text, let propertyType = propertyTextField.text  else { return }
+        
+        delegate?.onChangeText(priceFrom: (priceFrom as NSString).doubleValue, priceTo: (priceTo as NSString).doubleValue, propertyType: propertyType)
+    }
 }

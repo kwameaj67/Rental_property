@@ -23,3 +23,12 @@ struct Marker {
         Marker(name: "Ghana Standards Authority", lat: 5.6298216, lng: -0.1743329),
     ]
 }
+
+
+class FilterCondition {
+    var priceFrom: Double = 0.0
+    var priceTo: Double = 0.0
+    var propertyType: String = ""
+    var conveniences: [String] = []
+    var numberOfGuest: Int = 1
+}

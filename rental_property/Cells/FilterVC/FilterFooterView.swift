@@ -50,6 +50,7 @@ class FilterFooterView: UITableViewHeaderFooterView {
     }()
 
     @objc func handleApplyBtn(){
-        
+        generateHapticTouch()
+        delegate?.didTapApplyBtn()
     }
 }
