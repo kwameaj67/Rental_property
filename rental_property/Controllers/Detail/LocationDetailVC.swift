@@ -7,7 +7,10 @@
 
 import UIKit
 
+
 class LocationDetailVC: UIViewController {
+    
+    let data: [LocationImage] = LocationImage.data
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
@@ -35,12 +38,9 @@ class LocationDetailVC: UIViewController {
         return v
     }()
     
-    lazy var locationImage : UIImageView = {
-        var iv = UIImageView()
-        iv.image = UIImage(named: "house")?.withRenderingMode(.alwaysOriginal)
-        iv.isUserInteractionEnabled = true
-        iv.contentMode = .scaleAspectFill
-        iv.translatesAutoresizingMaskIntoConstraints = false
+    lazy var locationImage : LocationCollectionView = {
+        var iv = LocationCollectionView()
+        iv.images = data
         return iv
     }()
     
@@ -50,7 +50,12 @@ class LocationDetailVC: UIViewController {
         btn.setImage(image, for: .normal)
         btn.tintColor = .black
         btn.backgroundColor = .white
-        btn.layer.cornerRadius = 45/2
+        btn.layer.cornerRadius = 50/2
+        btn.layer.shadowColor = UIColor.black.cgColor
+        btn.layer.shadowOpacity = 0.1
+        btn.layer.shadowRadius = 8
+        btn.layer.shadowOffset = CGSize(width: 0, height: 2)
+        btn.layer.masksToBounds = false
         btn.addTarget(self, action: #selector(handleBackBtn), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -62,7 +67,12 @@ class LocationDetailVC: UIViewController {
         btn.setImage(image, for: .normal)
         btn.tintColor = .black
         btn.backgroundColor = .white
-        btn.layer.cornerRadius = 45/2
+        btn.layer.cornerRadius = 50/2
+        btn.layer.shadowColor = UIColor.black.cgColor
+        btn.layer.shadowOpacity = 0.1
+        btn.layer.shadowRadius = 8
+        btn.layer.shadowOffset = CGSize(width: 0, height: 2)
+        btn.layer.masksToBounds = false
         btn.addTarget(self, action: #selector(handleStarBtn), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -74,8 +84,6 @@ class LocationDetailVC: UIViewController {
         return v
     }()
 
-
-
     // MARK: Selectors
     @objc func handleBackBtn(){
         generateHapticTouch()
@@ -85,12 +93,13 @@ class LocationDetailVC: UIViewController {
     @objc func handleStarBtn(){
         generateHapticTouch()
     }
+
     func setupViews(){
         view.addSubview(container)
         container.addSubview(imageView)
         imageView.addSubview(locationImage)
-        locationImage.addSubview(backBtn)
-        locationImage.addSubview(starBtn)
+        container.addSubview(backBtn)
+        container.addSubview(starBtn)
         container.addSubview(locationDetailView)
     }
     
@@ -103,15 +112,15 @@ class LocationDetailVC: UIViewController {
             imageView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
             imageView.heightAnchor.constraint(equalTo: container.heightAnchor, multiplier: 0.6),
             
-            backBtn.topAnchor.constraint(equalTo: locationImage.topAnchor, constant: 40),
-            backBtn.leadingAnchor.constraint(equalTo: locationImage.leadingAnchor, constant: 20),
-            backBtn.heightAnchor.constraint(equalToConstant: 45),
-            backBtn.widthAnchor.constraint(equalToConstant: 45),
+            backBtn.topAnchor.constraint(equalTo: container.topAnchor, constant: 50),
+            backBtn.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 20),
+            backBtn.heightAnchor.constraint(equalToConstant: 50),
+            backBtn.widthAnchor.constraint(equalToConstant: 50),
             
-            starBtn.topAnchor.constraint(equalTo: locationImage.topAnchor, constant: 40),
-            starBtn.trailingAnchor.constraint(equalTo: locationImage.trailingAnchor, constant: -20),
-            starBtn.heightAnchor.constraint(equalToConstant: 45),
-            starBtn.widthAnchor.constraint(equalToConstant: 45),
+            starBtn.centerYAnchor.constraint(equalTo: backBtn.centerYAnchor),
+            starBtn.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -20),
+            starBtn.heightAnchor.constraint(equalToConstant: 50),
+            starBtn.widthAnchor.constraint(equalToConstant: 50),
             
             locationDetailView.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             locationDetailView.leadingAnchor.constraint(equalTo: container.leadingAnchor),

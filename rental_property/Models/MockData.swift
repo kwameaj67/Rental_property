@@ -32,3 +32,13 @@ class FilterCondition {
     var conveniences: [String] = []
     var numberOfGuest: Int = 1
 }
+
+struct LocationImage {
+    var image: String
+    
+    static let data: [LocationImage] = [
+        LocationImage(image: "house"),
+        LocationImage(image: "house2"),
+        LocationImage(image: "house3")
+    ]
+}

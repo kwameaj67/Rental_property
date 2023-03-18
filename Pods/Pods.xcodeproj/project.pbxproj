@@ -21,24 +21,45 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		35D15C07A6E94DF95383AD5A741CCAA1 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD4B351B391F54B29840D572362B36 /* AlignedCollectionViewFlowLayout.swift */; };
-		3CFAB9E1F8F2E9DE11A68D077FCD9529 /* Pods-rental_property-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1DD4603FBFF5C5F22DF2C2964FC4DF /* Pods-rental_property-dummy.m */; };
-		641CF9423273959B9B8A3EB2B54397A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		35D15C07A6E94DF95383AD5A741CCAA1 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B195CBCA8C8931EEE9D6AF12D875A301 /* AlignedCollectionViewFlowLayout.swift */; };
+		362B4C9D2E384BA0CCF01CEE893583DB /* CHIPageControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AD4BA5CEA8DE52661F5E7EC0C2C0B /* CHIPageControllable.swift */; };
+		3685F0E6ACFD9CE9F03513C9813D7C42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3A374D3B2566DFA42CF3034DE03F28B6 /* CHIBasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0F1C25E43390B55AD006F2FCBEB7 /* CHIBasePageControl.swift */; };
+		5B492E6A49B922C1A5363854795C3210 /* CHIPageControlChimayo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADECB8728FB079AB4737637B57AF1BE2 /* CHIPageControlChimayo.swift */; };
+		66572A16E262848ACD58968F0B23CFF0 /* CHIPageControlPuya.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C140AA6B9B31798DAB83839398F3F7 /* CHIPageControlPuya.swift */; };
+		8377753FAC9D25D1408518FB055A63AD /* CHIPageControlJalapeno.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46E953C4C0B90E3D502308194A60D1 /* CHIPageControlJalapeno.swift */; };
 		875FB9F86BFB0B695396A4485081B502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8B237D441B42A656457E49BFDF9BF878 /* Pods-rental_property-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 815C9BD64296BA72C0EBAD91EFF7DB84 /* Pods-rental_property-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3AF0A89E1EFFE2C97B0D2ACF1C5C801 /* AlignedCollectionViewFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DEC15F4AB545E0116C2747100ACD4A7 /* AlignedCollectionViewFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA29ADED436E5397CEE3994D73C7B002 /* AlignedCollectionViewFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B162CDC7FBD2D1469827176A220B89D9 /* AlignedCollectionViewFlowLayout-dummy.m */; };
+		9B46933E68CBD0EA2C07FD0EFD488828 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A047E18BDE9F7AFE0B178ABB86FBF407 /* CHIPageControlAji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22300D63C72CE4FAB752E2F157F6372C /* CHIPageControlAji.swift */; };
+		A323AEFF51D4A980CC554EF3E84619F3 /* CHIPageControlPaprika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59984050A82B97019692E55AFD614D /* CHIPageControlPaprika.swift */; };
+		B3AF0A89E1EFFE2C97B0D2ACF1C5C801 /* AlignedCollectionViewFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87DF03CAFC8CB44594A1269F5774A332 /* AlignedCollectionViewFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7F0C48049629F8DDF49863CC18DD080 /* CHIPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E520B428E6117869B9EBF47359408E0 /* CHIPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C83C67FF34D9E50912776760D5BFD0FC /* Pods-rental_property-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 815C9BD64296BA72C0EBAD91EFF7DB84 /* Pods-rental_property-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DB2343F778EB7929D679D53B76ECB8 /* CHIPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25277D73958C49500767CEC19032B7B0 /* CHIPageControl-dummy.m */; };
+		CA29ADED436E5397CEE3994D73C7B002 /* AlignedCollectionViewFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C118CA418E7154A79203571B828DAD1 /* AlignedCollectionViewFlowLayout-dummy.m */; };
+		CA43AE02267EC6A32F75A8BF4FA62691 /* CHIPageControlFresno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B7E9E8BE2A86BF9C7CB9A1C088B87 /* CHIPageControlFresno.swift */; };
+		D030071FC58D8A5A5AB5886F28DAA532 /* CHILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB929DAA7CE434B83ABD398A820EC1C7 /* CHILayer.swift */; };
+		D6E80C1DDB6E76EC3E9D66DE958E14E2 /* CHIPageControlJaloro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7608344B827C1F6002FF3C1CA63639 /* CHIPageControlJaloro.swift */; };
+		D8052C068BE5968B2F03E729877EDA83 /* CHIPageControlAleppo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575134C73FCBD1BDC450CD2DDFDBC3F5 /* CHIPageControlAleppo.swift */; };
+		EB15224A8B9D2DCD006ED67ACB96CEC4 /* Pods-rental_property-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1DD4603FBFF5C5F22DF2C2964FC4DF /* Pods-rental_property-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1FAFE6B0858F9743A8112DE66962F35D /* PBXContainerItemProxy */ = {
+		84E9CA78FC3F3AE72BC58722CE5DD82F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A7AC722D45BA5EF49F00D98C86978B;
+			remoteInfo = CHIPageControl;
+		};
+		A43548D752829890BDB26561D103160B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 87D05745DDD56D2B5D9CAB788154BF15;
 			remoteInfo = AlignedCollectionViewFlowLayout;
 		};
-		461F48CDC5DCFEE4520BB8A7EA206AC5 /* PBXContainerItemProxy */ = {
+		DA1C6ACD77E94CD6C36D824C73BD6DC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -48,44 +69,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C0477BE5BA61CAC1FEA3390610A8E6 /* AlignedCollectionViewFlowLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlignedCollectionViewFlowLayout.release.xcconfig; sourceTree = "<group>"; };
 		082CC536AB1DCEF3819C85F98C6B335D /* Pods-rental_property-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rental_property-resources.sh"; sourceTree = "<group>"; };
-		083B6736A5876D48FE8960F08A028D67 /* AlignedCollectionViewFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlignedCollectionViewFlowLayout-prefix.pch"; sourceTree = "<group>"; };
-		17FD4E2CB40DD8E4DC97E52895A7CE25 /* GoogleMaps.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMaps.xcframework; path = Maps/Frameworks/GoogleMaps.xcframework; sourceTree = "<group>"; };
-		1BC6C2439FCC5D462669EE77A8E5C01F /* AlignedCollectionViewFlowLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlignedCollectionViewFlowLayout.release.xcconfig; sourceTree = "<group>"; };
-		1FF317F97A28D890C233EB08B4C19346 /* AlignedCollectionViewFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlignedCollectionViewFlowLayout.modulemap; sourceTree = "<group>"; };
-		2ABC2B30A7CEF307E3C7E4BA6DCE4889 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		160A4C2FF22E58F6735A7FF9BCCE8683 /* CHIPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIPageControl.modulemap; sourceTree = "<group>"; };
+		22300D63C72CE4FAB752E2F157F6372C /* CHIPageControlAji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAji.swift; path = CHIPageControl/CHIPageControlAji.swift; sourceTree = "<group>"; };
+		25277D73958C49500767CEC19032B7B0 /* CHIPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIPageControl-dummy.m"; sourceTree = "<group>"; };
+		298D4A7CF93A390C9433449489595C59 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMapsCore.xcframework; path = Maps/Frameworks/GoogleMapsCore.xcframework; sourceTree = "<group>"; };
 		2AC1FB8C4A064F451AF1AFBA14B41057 /* Pods-rental_property.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rental_property.release.xcconfig"; sourceTree = "<group>"; };
-		2C9BB8E5F955A4B8A2678B72E4B7F3D6 /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
 		3D75035F3FE2C01FCF42FCDCFC44191E /* Pods-rental_property-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-rental_property-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E1DD4603FBFF5C5F22DF2C2964FC4DF /* Pods-rental_property-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-rental_property-dummy.m"; sourceTree = "<group>"; };
-		418119AC2CB7A9D8BF42A158AA86A943 /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMapsBase.xcframework; path = Base/Frameworks/GoogleMapsBase.xcframework; sourceTree = "<group>"; };
+		40705E46147449FEE890E638E78D0D3B /* GoogleMaps-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleMaps-xcframeworks.sh"; sourceTree = "<group>"; };
+		444DF007FF0C1B0ED57E2B20B340447D /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMapsBase.xcframework; path = Base/Frameworks/GoogleMapsBase.xcframework; sourceTree = "<group>"; };
+		44FC1764BC1B95DAAC2404DCF938AFB2 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Maps/Frameworks/GoogleMaps.xcframework/ios-arm64/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHIPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlignedCollectionViewFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		64FD4B351B391F54B29840D572362B36 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlignedCollectionViewFlowLayout.swift; path = AlignedCollectionViewFlowLayout/Classes/AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		535F575D7EE51E6D8EA8D0554499C9C0 /* CHIPageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.release.xcconfig; sourceTree = "<group>"; };
+		575134C73FCBD1BDC450CD2DDFDBC3F5 /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAleppo.swift; path = CHIPageControl/CHIPageControlAleppo.swift; sourceTree = "<group>"; };
+		5F262DE72B1696A7338D3ED2E7786F9D /* CHIPageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.debug.xcconfig; sourceTree = "<group>"; };
+		611AD4BA5CEA8DE52661F5E7EC0C2C0B /* CHIPageControllable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControllable.swift; path = CHIPageControl/Core/CHIPageControllable.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7C010716BCD7555A550035D47FCF6351 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Maps/Frameworks/GoogleMaps.xcframework/ios-arm64_x86_64-simulator/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		7D2F6C257D6503257E151068285FA455 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Maps/Frameworks/GoogleMaps.xcframework/ios-arm64/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		7DEC15F4AB545E0116C2747100ACD4A7 /* AlignedCollectionViewFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlignedCollectionViewFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		7E520B428E6117869B9EBF47359408E0 /* CHIPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-umbrella.h"; sourceTree = "<group>"; };
+		81087248D9051CE9A3BE2CE85185912E /* CHIPageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CHIPageControl-Info.plist"; sourceTree = "<group>"; };
 		815C9BD64296BA72C0EBAD91EFF7DB84 /* Pods-rental_property-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-rental_property-umbrella.h"; sourceTree = "<group>"; };
-		8388AEFA56D8B77125BDC8D8ABADB54F /* GoogleMaps-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleMaps-xcframeworks.sh"; sourceTree = "<group>"; };
+		839B7E9E8BE2A86BF9C7CB9A1C088B87 /* CHIPageControlFresno.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlFresno.swift; path = CHIPageControl/CHIPageControlFresno.swift; sourceTree = "<group>"; };
+		87DF03CAFC8CB44594A1269F5774A332 /* AlignedCollectionViewFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlignedCollectionViewFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		8C118CA418E7154A79203571B828DAD1 /* AlignedCollectionViewFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlignedCollectionViewFlowLayout-dummy.m"; sourceTree = "<group>"; };
 		912673B44384C2D8E2CF34A32BCA28C1 /* Pods-rental_property-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rental_property-frameworks.sh"; sourceTree = "<group>"; };
+		9B59984050A82B97019692E55AFD614D /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPaprika.swift; path = CHIPageControl/CHIPageControlPaprika.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0A17E8A084DA93BB42C0BB4573821CC /* AlignedCollectionViewFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlignedCollectionViewFlowLayout.modulemap; sourceTree = "<group>"; };
+		A0CB2CEB6ABC5BA278F8A790F4AA8730 /* AlignedCollectionViewFlowLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlignedCollectionViewFlowLayout.debug.xcconfig; sourceTree = "<group>"; };
+		A0F97374E7EDDC173136FA3B94B6201F /* GoogleMaps.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMaps.xcframework; path = Maps/Frameworks/GoogleMaps.xcframework; sourceTree = "<group>"; };
 		A2CC819B9FDF2F16559BD6B3512261BE /* Pods-rental_property */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-rental_property"; path = Pods_rental_property.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADECB8728FB079AB4737637B57AF1BE2 /* CHIPageControlChimayo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlChimayo.swift; path = CHIPageControl/CHIPageControlChimayo.swift; sourceTree = "<group>"; };
 		AED01442164CF1ACD783B210E8349BE9 /* Pods-rental_property-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-rental_property-Info.plist"; sourceTree = "<group>"; };
-		B162CDC7FBD2D1469827176A220B89D9 /* AlignedCollectionViewFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlignedCollectionViewFlowLayout-dummy.m"; sourceTree = "<group>"; };
-		B6A6889F5F9036DE8763C84EA40F9430 /* AlignedCollectionViewFlowLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlignedCollectionViewFlowLayout.debug.xcconfig; sourceTree = "<group>"; };
+		B195CBCA8C8931EEE9D6AF12D875A301 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlignedCollectionViewFlowLayout.swift; path = AlignedCollectionViewFlowLayout/Classes/AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		B8C140AA6B9B31798DAB83839398F3F7 /* CHIPageControlPuya.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPuya.swift; path = CHIPageControl/CHIPageControlPuya.swift; sourceTree = "<group>"; };
+		BA7608344B827C1F6002FF3C1CA63639 /* CHIPageControlJaloro.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJaloro.swift; path = CHIPageControl/CHIPageControlJaloro.swift; sourceTree = "<group>"; };
 		BBC00CF93568200F2FB6C13381B7B0B3 /* Pods-rental_property.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rental_property.debug.xcconfig"; sourceTree = "<group>"; };
-		BFF32F6C4F9A23DC109E56513FE279E0 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMapsCore.xcframework; path = Maps/Frameworks/GoogleMapsCore.xcframework; sourceTree = "<group>"; };
+		BEC3ABD4216D7DCC045CB8B2B4573BED /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
 		C24040A176438431244EBB70E997F288 /* Pods-rental_property-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-rental_property-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9308E68C82CB875AE40FEBB9AF45695 /* CHIPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHIPageControl-prefix.pch"; sourceTree = "<group>"; };
+		CB929DAA7CE434B83ABD398A820EC1C7 /* CHILayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHILayer.swift; path = CHIPageControl/Core/CHILayer.swift; sourceTree = "<group>"; };
+		CDEE0F1C25E43390B55AD006F2FCBEB7 /* CHIBasePageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIBasePageControl.swift; path = CHIPageControl/Core/CHIBasePageControl.swift; sourceTree = "<group>"; };
+		D210655B5B68D76396CD44D84B7E7CD7 /* AlignedCollectionViewFlowLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlignedCollectionViewFlowLayout-Info.plist"; sourceTree = "<group>"; };
 		D52EEF9D91C0873F2E9ED6CBF6FF9D7D /* Pods-rental_property.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-rental_property.modulemap"; sourceTree = "<group>"; };
-		E26ECFA7FA9689DDD9F0BCBE2896300C /* AlignedCollectionViewFlowLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlignedCollectionViewFlowLayout-Info.plist"; sourceTree = "<group>"; };
+		DA46E953C4C0B90E3D502308194A60D1 /* CHIPageControlJalapeno.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlJalapeno.swift; path = CHIPageControl/CHIPageControlJalapeno.swift; sourceTree = "<group>"; };
+		E55BDAC51F9993BE024B53CB4A41BDDA /* AlignedCollectionViewFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlignedCollectionViewFlowLayout-prefix.pch"; sourceTree = "<group>"; };
+		ED06342F6BF3BA9D100BFCEF959C2A41 /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		F772E6AC2E21869772115C73BD3C16D5 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Maps/Frameworks/GoogleMaps.xcframework/ios-arm64_x86_64-simulator/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		68189ECCF67E3CC0045004911E4E6C4E /* Frameworks */ = {
+		685E7CAB232DF810319660AEE3C67CEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641CF9423273959B9B8A3EB2B54397A1 /* Foundation.framework in Frameworks */,
+				3685F0E6ACFD9CE9F03513C9813D7C42 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,69 +137,107 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACD4B2CE03E218F3869602B3DB1AD60D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B46933E68CBD0EA2C07FD0EFD488828 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1569558ABD58A8BC910647DE988F2BB3 /* Support Files */ = {
+		042E3C93566962C472C99EC648796241 /* CHIPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				1FF317F97A28D890C233EB08B4C19346 /* AlignedCollectionViewFlowLayout.modulemap */,
-				B162CDC7FBD2D1469827176A220B89D9 /* AlignedCollectionViewFlowLayout-dummy.m */,
-				E26ECFA7FA9689DDD9F0BCBE2896300C /* AlignedCollectionViewFlowLayout-Info.plist */,
-				083B6736A5876D48FE8960F08A028D67 /* AlignedCollectionViewFlowLayout-prefix.pch */,
-				7DEC15F4AB545E0116C2747100ACD4A7 /* AlignedCollectionViewFlowLayout-umbrella.h */,
-				B6A6889F5F9036DE8763C84EA40F9430 /* AlignedCollectionViewFlowLayout.debug.xcconfig */,
-				1BC6C2439FCC5D462669EE77A8E5C01F /* AlignedCollectionViewFlowLayout.release.xcconfig */,
+				CDEE0F1C25E43390B55AD006F2FCBEB7 /* CHIBasePageControl.swift */,
+				CB929DAA7CE434B83ABD398A820EC1C7 /* CHILayer.swift */,
+				22300D63C72CE4FAB752E2F157F6372C /* CHIPageControlAji.swift */,
+				575134C73FCBD1BDC450CD2DDFDBC3F5 /* CHIPageControlAleppo.swift */,
+				ADECB8728FB079AB4737637B57AF1BE2 /* CHIPageControlChimayo.swift */,
+				839B7E9E8BE2A86BF9C7CB9A1C088B87 /* CHIPageControlFresno.swift */,
+				DA46E953C4C0B90E3D502308194A60D1 /* CHIPageControlJalapeno.swift */,
+				BA7608344B827C1F6002FF3C1CA63639 /* CHIPageControlJaloro.swift */,
+				611AD4BA5CEA8DE52661F5E7EC0C2C0B /* CHIPageControllable.swift */,
+				9B59984050A82B97019692E55AFD614D /* CHIPageControlPaprika.swift */,
+				B8C140AA6B9B31798DAB83839398F3F7 /* CHIPageControlPuya.swift */,
+				5092C5731FB5EF88C1895CCECF446C80 /* Aji */,
+				4492A37E39758785E38E99AF41961513 /* Aleppo */,
+				893BEB532FDBAEE612755CD8AAD0FD70 /* Chimayo */,
+				9A1BDA5A6F4AD67B62A296C1B12ADC5C /* Fresno */,
+				12EC5A2E8377865FE14543DD231B1388 /* Jalapeno */,
+				0CD6527B49CAFBB0B7E0BE1C84F1EF06 /* Jaloro */,
+				BCDF1A8B929BFFDDCA8F0F202EAC9642 /* Paprika */,
+				D77C7EFFB31731910EA34D97737766E2 /* Puya */,
+				B398B9DAD8CED0C5FF6786BD636FE545 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/AlignedCollectionViewFlowLayout";
+			path = CHIPageControl;
 			sourceTree = "<group>";
 		};
-		1578E61CA8761AC1D21D888A6B0B6941 /* AlignedCollectionViewFlowLayout */ = {
+		0CD6527B49CAFBB0B7E0BE1C84F1EF06 /* Jaloro */ = {
 			isa = PBXGroup;
 			children = (
-				64FD4B351B391F54B29840D572362B36 /* AlignedCollectionViewFlowLayout.swift */,
-				1569558ABD58A8BC910647DE988F2BB3 /* Support Files */,
 			);
-			path = AlignedCollectionViewFlowLayout;
+			name = Jaloro;
 			sourceTree = "<group>";
 		};
-		2DFDDDAB5ACF1F2E577033E80A92D2EE /* Frameworks */ = {
+		12EC5A2E8377865FE14543DD231B1388 /* Jalapeno */ = {
 			isa = PBXGroup;
 			children = (
-				418119AC2CB7A9D8BF42A158AA86A943 /* GoogleMapsBase.xcframework */,
 			);
-			name = Frameworks;
+			name = Jalapeno;
 			sourceTree = "<group>";
 		};
-		3AFBC32675CDE5F0B4A52D7A7FCEF021 /* Maps */ = {
+		134AD85F6C76F78C304E960F0CF57D5C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				D049640E384E22BF83219F33A062A571 /* Frameworks */,
-				9B1B815609C30CFD5B0C42335313594D /* Resources */,
+				1706388A35D3B74321C6487014ACE8A5 /* Frameworks */,
+				785223F0F8113467AD026D9BA6464897 /* Resources */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
 		};
-		43203080F4E01A0D58DAF91871AF5D3E /* GoogleMaps */ = {
+		1706388A35D3B74321C6487014ACE8A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84723A3B18503EE12E202231C82C1D61 /* Base */,
-				3AFBC32675CDE5F0B4A52D7A7FCEF021 /* Maps */,
-				4ADF9FCA7B9B1714EC20EE788EA71D65 /* Support Files */,
+				A0F97374E7EDDC173136FA3B94B6201F /* GoogleMaps.xcframework */,
+				298D4A7CF93A390C9433449489595C59 /* GoogleMapsCore.xcframework */,
 			);
-			path = GoogleMaps;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4ADF9FCA7B9B1714EC20EE788EA71D65 /* Support Files */ = {
+		1C6143730C15E3B422D0D9BFD178897F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8388AEFA56D8B77125BDC8D8ABADB54F /* GoogleMaps-xcframeworks.sh */,
-				2C9BB8E5F955A4B8A2678B72E4B7F3D6 /* GoogleMaps.debug.xcconfig */,
-				2ABC2B30A7CEF307E3C7E4BA6DCE4889 /* GoogleMaps.release.xcconfig */,
+				428813B18096B6C0517C16A1A00AB508 /* AlignedCollectionViewFlowLayout */,
+				042E3C93566962C472C99EC648796241 /* CHIPageControl */,
+				60793E4B1C1B628C8380A94DEA8D689C /* GoogleMaps */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleMaps";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		428813B18096B6C0517C16A1A00AB508 /* AlignedCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B195CBCA8C8931EEE9D6AF12D875A301 /* AlignedCollectionViewFlowLayout.swift */,
+				9C906459AA4CC6065958826A1F5D4CE4 /* Support Files */,
+			);
+			path = AlignedCollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
+		4492A37E39758785E38E99AF41961513 /* Aleppo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Aleppo;
+			sourceTree = "<group>";
+		};
+		5092C5731FB5EF88C1895CCECF446C80 /* Aji */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Aji;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -170,13 +248,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		784271B91514BEBE96788784AA62DCE5 /* Pods */ = {
+		60793E4B1C1B628C8380A94DEA8D689C /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				1578E61CA8761AC1D21D888A6B0B6941 /* AlignedCollectionViewFlowLayout */,
-				43203080F4E01A0D58DAF91871AF5D3E /* GoogleMaps */,
+				93753ABD0935E2784EDA434E8F6B3401 /* Base */,
+				134AD85F6C76F78C304E960F0CF57D5C /* Maps */,
+				A09FFA005BBB90B5A50275083E66FA8C /* Support Files */,
 			);
-			name = Pods;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		785223F0F8113467AD026D9BA6464897 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44FC1764BC1B95DAAC2404DCF938AFB2 /* GoogleMaps.bundle */,
+				F772E6AC2E21869772115C73BD3C16D5 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8286566F6D6DF75F2B206FCF51D86699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				444DF007FF0C1B0ED57E2B20B340447D /* GoogleMapsBase.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		83E77E2716AD3D9A31484E93F450A27A /* Pods-rental_property */ = {
@@ -197,21 +293,84 @@
 			path = "Target Support Files/Pods-rental_property";
 			sourceTree = "<group>";
 		};
-		84723A3B18503EE12E202231C82C1D61 /* Base */ = {
+		893BEB532FDBAEE612755CD8AAD0FD70 /* Chimayo */ = {
 			isa = PBXGroup;
 			children = (
-				2DFDDDAB5ACF1F2E577033E80A92D2EE /* Frameworks */,
+			);
+			name = Chimayo;
+			sourceTree = "<group>";
+		};
+		93753ABD0935E2784EDA434E8F6B3401 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8286566F6D6DF75F2B206FCF51D86699 /* Frameworks */,
 			);
 			name = Base;
 			sourceTree = "<group>";
 		};
-		9B1B815609C30CFD5B0C42335313594D /* Resources */ = {
+		9A1BDA5A6F4AD67B62A296C1B12ADC5C /* Fresno */ = {
 			isa = PBXGroup;
 			children = (
-				7D2F6C257D6503257E151068285FA455 /* GoogleMaps.bundle */,
-				7C010716BCD7555A550035D47FCF6351 /* GoogleMaps.bundle */,
 			);
-			name = Resources;
+			name = Fresno;
+			sourceTree = "<group>";
+		};
+		9C906459AA4CC6065958826A1F5D4CE4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0A17E8A084DA93BB42C0BB4573821CC /* AlignedCollectionViewFlowLayout.modulemap */,
+				8C118CA418E7154A79203571B828DAD1 /* AlignedCollectionViewFlowLayout-dummy.m */,
+				D210655B5B68D76396CD44D84B7E7CD7 /* AlignedCollectionViewFlowLayout-Info.plist */,
+				E55BDAC51F9993BE024B53CB4A41BDDA /* AlignedCollectionViewFlowLayout-prefix.pch */,
+				87DF03CAFC8CB44594A1269F5774A332 /* AlignedCollectionViewFlowLayout-umbrella.h */,
+				A0CB2CEB6ABC5BA278F8A790F4AA8730 /* AlignedCollectionViewFlowLayout.debug.xcconfig */,
+				01C0477BE5BA61CAC1FEA3390610A8E6 /* AlignedCollectionViewFlowLayout.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AlignedCollectionViewFlowLayout";
+			sourceTree = "<group>";
+		};
+		A09FFA005BBB90B5A50275083E66FA8C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				40705E46147449FEE890E638E78D0D3B /* GoogleMaps-xcframeworks.sh */,
+				ED06342F6BF3BA9D100BFCEF959C2A41 /* GoogleMaps.debug.xcconfig */,
+				BEC3ABD4216D7DCC045CB8B2B4573BED /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		B398B9DAD8CED0C5FF6786BD636FE545 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				160A4C2FF22E58F6735A7FF9BCCE8683 /* CHIPageControl.modulemap */,
+				25277D73958C49500767CEC19032B7B0 /* CHIPageControl-dummy.m */,
+				81087248D9051CE9A3BE2CE85185912E /* CHIPageControl-Info.plist */,
+				C9308E68C82CB875AE40FEBB9AF45695 /* CHIPageControl-prefix.pch */,
+				7E520B428E6117869B9EBF47359408E0 /* CHIPageControl-umbrella.h */,
+				5F262DE72B1696A7338D3ED2E7786F9D /* CHIPageControl.debug.xcconfig */,
+				535F575D7EE51E6D8EA8D0554499C9C0 /* CHIPageControl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CHIPageControl";
+			sourceTree = "<group>";
+		};
+		BA6C778BB6ED602357AB64B6608B7830 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout.framework */,
+				4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl.framework */,
+				A2CC819B9FDF2F16559BD6B3512261BE /* Pods-rental_property */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCDF1A8B929BFFDDCA8F0F202EAC9642 /* Paprika */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Paprika;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -219,19 +378,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				784271B91514BEBE96788784AA62DCE5 /* Pods */,
-				EA3BAC9BB5AF576F268D297A73773E99 /* Products */,
+				1C6143730C15E3B422D0D9BFD178897F /* Pods */,
+				BA6C778BB6ED602357AB64B6608B7830 /* Products */,
 				D7F94A29B1F863FB5BB1FC5C5B087530 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D049640E384E22BF83219F33A062A571 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				17FD4E2CB40DD8E4DC97E52895A7CE25 /* GoogleMaps.xcframework */,
-				BFF32F6C4F9A23DC109E56513FE279E0 /* GoogleMapsCore.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -242,6 +392,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D77C7EFFB31731910EA34D97737766E2 /* Puya */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Puya;
+			sourceTree = "<group>";
+		};
 		D7F94A29B1F863FB5BB1FC5C5B087530 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,18 +407,17 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EA3BAC9BB5AF576F268D297A73773E99 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout.framework */,
-				A2CC819B9FDF2F16559BD6B3512261BE /* Pods-rental_property */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0A5668479DA2150ADDE71D08D249B95F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7F0C48049629F8DDF49863CC18DD080 /* CHIPageControl-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		70174C2102DE029F06E03B325D59500B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,11 +426,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AC3EBE1D4CD47C3EDA315E5D57027CF /* Headers */ = {
+		D54B14A08D9347BF42F10C6849C1CC1D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B237D441B42A656457E49BFDF9BF878 /* Pods-rental_property-umbrella.h in Headers */,
+				C83C67FF34D9E50912776760D5BFD0FC /* Pods-rental_property-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,22 +439,41 @@
 /* Begin PBXNativeTarget section */
 		4E3C2851B00A6A463B3146537C24104A /* Pods-rental_property */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6065F7C5F125657B050A325A3A4DCDDA /* Build configuration list for PBXNativeTarget "Pods-rental_property" */;
+			buildConfigurationList = 5C57781986D24F286D84A5321DF097CB /* Build configuration list for PBXNativeTarget "Pods-rental_property" */;
 			buildPhases = (
-				8AC3EBE1D4CD47C3EDA315E5D57027CF /* Headers */,
-				B5580F061C12E2A982970429FB7B7757 /* Sources */,
-				68189ECCF67E3CC0045004911E4E6C4E /* Frameworks */,
-				531CEE6A1B30ED228CC7811E4A1C4E14 /* Resources */,
+				D54B14A08D9347BF42F10C6849C1CC1D /* Headers */,
+				EB4609BB92A0DC0BCF7C90A88ED2BE02 /* Sources */,
+				ACD4B2CE03E218F3869602B3DB1AD60D /* Frameworks */,
+				5C80603F3385AD2AD5CD62AB6F98A8B2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7A96F96905D42EF57184F7949DEB3725 /* PBXTargetDependency */,
-				59D0A4DA89699F4E81E338450172FE74 /* PBXTargetDependency */,
+				6AC388EE26EFE153359EA9B896F878FE /* PBXTargetDependency */,
+				4459A92B4AB7715BDD188AE600C4BA89 /* PBXTargetDependency */,
+				0321B3E3E1FC776F792CAD7A8F840203 /* PBXTargetDependency */,
 			);
 			name = "Pods-rental_property";
 			productName = Pods_rental_property;
 			productReference = A2CC819B9FDF2F16559BD6B3512261BE /* Pods-rental_property */;
+			productType = "com.apple.product-type.framework";
+		};
+		58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1600C207C7D76BE3C3F71C5B46884F07 /* Build configuration list for PBXNativeTarget "CHIPageControl" */;
+			buildPhases = (
+				0A5668479DA2150ADDE71D08D249B95F /* Headers */,
+				D5C3BCCB29C3971BD1991C20760B3607 /* Sources */,
+				685E7CAB232DF810319660AEE3C67CEC /* Frameworks */,
+				ADF8F9E916F35ED7CB6E5E25ECB16DA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHIPageControl;
+			productName = CHIPageControl;
+			productReference = 4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		87D05745DDD56D2B5D9CAB788154BF15 /* AlignedCollectionViewFlowLayout */ = {
@@ -326,7 +501,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -337,11 +512,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = EA3BAC9BB5AF576F268D297A73773E99 /* Products */;
+			productRefGroup = BA6C778BB6ED602357AB64B6608B7830 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				87D05745DDD56D2B5D9CAB788154BF15 /* AlignedCollectionViewFlowLayout */,
+				58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */,
 				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
 				4E3C2851B00A6A463B3146537C24104A /* Pods-rental_property */,
 			);
@@ -349,14 +525,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		531CEE6A1B30ED228CC7811E4A1C4E14 /* Resources */ = {
+		5C61706FDEAAB24E209066EC9BEA2363 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C61706FDEAAB24E209066EC9BEA2363 /* Resources */ = {
+		5C80603F3385AD2AD5CD62AB6F98A8B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADF8F9E916F35ED7CB6E5E25ECB16DA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,11 +569,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B5580F061C12E2A982970429FB7B7757 /* Sources */ = {
+		D5C3BCCB29C3971BD1991C20760B3607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CFAB9E1F8F2E9DE11A68D077FCD9529 /* Pods-rental_property-dummy.m in Sources */,
+				3A374D3B2566DFA42CF3034DE03F28B6 /* CHIBasePageControl.swift in Sources */,
+				D030071FC58D8A5A5AB5886F28DAA532 /* CHILayer.swift in Sources */,
+				C8DB2343F778EB7929D679D53B76ECB8 /* CHIPageControl-dummy.m in Sources */,
+				A047E18BDE9F7AFE0B178ABB86FBF407 /* CHIPageControlAji.swift in Sources */,
+				D8052C068BE5968B2F03E729877EDA83 /* CHIPageControlAleppo.swift in Sources */,
+				5B492E6A49B922C1A5363854795C3210 /* CHIPageControlChimayo.swift in Sources */,
+				CA43AE02267EC6A32F75A8BF4FA62691 /* CHIPageControlFresno.swift in Sources */,
+				8377753FAC9D25D1408518FB055A63AD /* CHIPageControlJalapeno.swift in Sources */,
+				D6E80C1DDB6E76EC3E9D66DE958E14E2 /* CHIPageControlJaloro.swift in Sources */,
+				362B4C9D2E384BA0CCF01CEE893583DB /* CHIPageControllable.swift in Sources */,
+				A323AEFF51D4A980CC554EF3E84619F3 /* CHIPageControlPaprika.swift in Sources */,
+				66572A16E262848ACD58968F0B23CFF0 /* CHIPageControlPuya.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,27 +597,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB4609BB92A0DC0BCF7C90A88ED2BE02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB15224A8B9D2DCD006ED67ACB96CEC4 /* Pods-rental_property-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59D0A4DA89699F4E81E338450172FE74 /* PBXTargetDependency */ = {
+		0321B3E3E1FC776F792CAD7A8F840203 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleMaps;
 			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = 461F48CDC5DCFEE4520BB8A7EA206AC5 /* PBXContainerItemProxy */;
+			targetProxy = DA1C6ACD77E94CD6C36D824C73BD6DC1 /* PBXContainerItemProxy */;
 		};
-		7A96F96905D42EF57184F7949DEB3725 /* PBXTargetDependency */ = {
+		4459A92B4AB7715BDD188AE600C4BA89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CHIPageControl;
+			target = 58A7AC722D45BA5EF49F00D98C86978B /* CHIPageControl */;
+			targetProxy = 84E9CA78FC3F3AE72BC58722CE5DD82F /* PBXContainerItemProxy */;
+		};
+		6AC388EE26EFE153359EA9B896F878FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AlignedCollectionViewFlowLayout;
 			target = 87D05745DDD56D2B5D9CAB788154BF15 /* AlignedCollectionViewFlowLayout */;
-			targetProxy = 1FAFE6B0858F9743A8112DE66962F35D /* PBXContainerItemProxy */;
+			targetProxy = A43548D752829890BDB26561D103160B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2849173F742613EA0A4D39D12D744DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBC00CF93568200F2FB6C13381B7B0B3 /* Pods-rental_property.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-rental_property/Pods-rental_property-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-rental_property/Pods-rental_property.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		4036BEA8E7C2F199C79842AA422C8575 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BC6C2439FCC5D462669EE77A8E5C01F /* AlignedCollectionViewFlowLayout.release.xcconfig */;
+			baseConfigurationReference = 01C0477BE5BA61CAC1FEA3390610A8E6 /* AlignedCollectionViewFlowLayout.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -491,7 +736,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -520,6 +764,40 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4D568990C76F9E9249BC1230D798E435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F262DE72B1696A7338D3ED2E7786F9D /* CHIPageControl.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CHIPageControl/CHIPageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CHIPageControl/CHIPageControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CHIPageControl/CHIPageControl.modulemap";
+				PRODUCT_MODULE_NAME = CHIPageControl;
+				PRODUCT_NAME = CHIPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -558,7 +836,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -586,113 +863,7 @@
 			};
 			name = Release;
 		};
-		A0D32A92267F8EB045540F58A3FB9721 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ABC2B30A7CEF307E3C7E4BA6DCE4889 /* GoogleMaps.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A6F9A3420493DDFF37FE086ABBB8AEA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C9BB8E5F955A4B8A2678B72E4B7F3D6 /* GoogleMaps.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		AE2040063E7D9783A790CBAAC9473C4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBC00CF93568200F2FB6C13381B7B0B3 /* Pods-rental_property.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-rental_property/Pods-rental_property-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-rental_property/Pods-rental_property.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EE4251C8742DED4835D60BB47D18F309 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6A6889F5F9036DE8763C84EA40F9430 /* AlignedCollectionViewFlowLayout.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout.modulemap";
-				PRODUCT_MODULE_NAME = AlignedCollectionViewFlowLayout;
-				PRODUCT_NAME = AlignedCollectionViewFlowLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F93E6E373BA739DA8A1F7FBB2C7C196A /* Release */ = {
+		8C2C6755E508E31CAA10BF622C3EFF26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AC1FB8C4A064F451AF1AFBA14B41057 /* Pods-rental_property.release.xcconfig */;
 			buildSettings = {
@@ -730,9 +901,122 @@
 			};
 			name = Release;
 		};
+		A0D32A92267F8EB045540F58A3FB9721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC3ABD4216D7DCC045CB8B2B4573BED /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A375B6EA69164680DF1542095EC2D090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535F575D7EE51E6D8EA8D0554499C9C0 /* CHIPageControl.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CHIPageControl/CHIPageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CHIPageControl/CHIPageControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CHIPageControl/CHIPageControl.modulemap";
+				PRODUCT_MODULE_NAME = CHIPageControl;
+				PRODUCT_NAME = CHIPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6F9A3420493DDFF37FE086ABBB8AEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED06342F6BF3BA9D100BFCEF959C2A41 /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE4251C8742DED4835D60BB47D18F309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0CB2CEB6ABC5BA278F8A790F4AA8730 /* AlignedCollectionViewFlowLayout.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout.modulemap";
+				PRODUCT_MODULE_NAME = AlignedCollectionViewFlowLayout;
+				PRODUCT_NAME = AlignedCollectionViewFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1600C207C7D76BE3C3F71C5B46884F07 /* Build configuration list for PBXNativeTarget "CHIPageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D568990C76F9E9249BC1230D798E435 /* Debug */,
+				A375B6EA69164680DF1542095EC2D090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		432269212CA7661476954A7A4DAA814D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -751,11 +1035,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6065F7C5F125657B050A325A3A4DCDDA /* Build configuration list for PBXNativeTarget "Pods-rental_property" */ = {
+		5C57781986D24F286D84A5321DF097CB /* Build configuration list for PBXNativeTarget "Pods-rental_property" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE2040063E7D9783A790CBAAC9473C4C /* Debug */,
-				F93E6E373BA739DA8A1F7FBB2C7C196A /* Release */,
+				2849173F742613EA0A4D39D12D744DD5 /* Debug */,
+				8C2C6755E508E31CAA10BF622C3EFF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6506CD1F29C661EF00E8A0D9 /* LocationCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506CD1E29C661EF00E8A0D9 /* LocationCollectionView.swift */; };
+		6506CD2129C6629D00E8A0D9 /* LocationImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6506CD2029C6629D00E8A0D9 /* LocationImageCollectionViewCell.swift */; };
 		650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */; };
 		650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F2E29B918AC0050B6B3 /* PropertyDetail.swift */; };
 		650A4F3429BA03EC0050B6B3 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A4F3329BA03EC0050B6B3 /* FilterHeaderView.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		0AA1F2086AF7E0853DDD8D49 /* Pods-rental_property.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rental_property.debug.xcconfig"; path = "Target Support Files/Pods-rental_property/Pods-rental_property.debug.xcconfig"; sourceTree = "<group>"; };
 		48D87E5361B9019C1D0D6DD4 /* Pods_rental_property.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rental_property.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6506CD1E29C661EF00E8A0D9 /* LocationCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionView.swift; sourceTree = "<group>"; };
+		6506CD2029C6629D00E8A0D9 /* LocationImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		650A4F2A29B914B20050B6B3 /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		650A4F2B29B9160B0050B6B3 /* property-detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "property-detail.json"; sourceTree = "<group>"; };
 		650A4F2C29B9184F0050B6B3 /* PropertyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLocation.swift; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6506CD1D29C661D100E8A0D9 /* LocationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6506CD2029C6629D00E8A0D9 /* LocationImageCollectionViewCell.swift */,
+			);
+			path = LocationDetail;
+			sourceTree = "<group>";
+		};
 		650A4F3129BA03A40050B6B3 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +148,7 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
-		650A4F3829BB9E7D0050B6B3 /* FilterVC */ = {
+		650A4F3829BB9E7D0050B6B3 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
 				650A4F3929BB9E9D0050B6B3 /* PriceTableViewCell.swift */,
@@ -145,7 +157,7 @@
 				650A4F4329BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift */,
 				650A4F4729BD2DBE0050B6B3 /* FilterFooterView.swift */,
 			);
-			path = FilterVC;
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		65103AC729B540EA00394473 /* Controllers */ = {
@@ -192,7 +204,8 @@
 		65103ACB29B5410D00394473 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				650A4F3829BB9E7D0050B6B3 /* FilterVC */,
+				6506CD1D29C661D100E8A0D9 /* LocationDetail */,
+				650A4F3829BB9E7D0050B6B3 /* Filter */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -259,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				6588D60229C06293001BFFC1 /* LocationDetailView.swift */,
+				6506CD1E29C661EF00E8A0D9 /* LocationCollectionView.swift */,
 			);
 			path = LocationDetail;
 			sourceTree = "<group>";
@@ -460,6 +474,7 @@
 				65103AFA29B6804900394473 /* InfoView.swift in Sources */,
 				650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */,
 				6588D5FE29BEEF9B001BFFC1 /* LocationDetailVC.swift in Sources */,
+				6506CD2129C6629D00E8A0D9 /* LocationImageCollectionViewCell.swift in Sources */,
 				65103AE929B57C2B00394473 /* SearchView.swift in Sources */,
 				65103AF229B6425200394473 /* GPSView.swift in Sources */,
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
@@ -481,6 +496,7 @@
 				65103ADF29B5443500394473 /* UIViewController+Ext.swift in Sources */,
 				65C43EE129B53F510022AF4F /* AppDelegate.swift in Sources */,
 				6588D60029BEEFF7001BFFC1 /* LocationDetailVC+Delegates.swift in Sources */,
+				6506CD1F29C661EF00E8A0D9 /* LocationCollectionView.swift in Sources */,
 				65C43EE329B53F510022AF4F /* SceneDelegate.swift in Sources */,
 				650D805F29C4FA45001C82C8 /* Type+Ext.swift in Sources */,
 				650A4F3E29BBB4AD0050B6B3 /* ConvenienceTableViewCell.swift in Sources */,

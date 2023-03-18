@@ -7,7 +7,7 @@
         "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
         "guests":10,
         "price":150,
-        "image_url":"",
+        "image_url":[""],
     },
     {
         "location_id": 2,
@@ -17,7 +17,7 @@
         "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
         "guests":10,
         "price":150,
-        "image_url":"",
+        "image_url":[""],
     },
     {
         "location_id": 3,
@@ -27,7 +27,7 @@
         "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
         "guests":10,
         "price":150,
-        "image_url":"",
+        "image_url":[""],
     },
     {
         "location_id": 4,
@@ -37,7 +37,7 @@
         "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
         "guests":10,
         "price":150,
-        "image_url":"",
+        "image_url":[""],
     },
     {
         "location_id": 5,
@@ -47,7 +47,7 @@
         "features":["In the woods","Lakes and Rivers","Views","Hot Tubs","TV","Wordburner","Family Friendly"],
         "guests":10,
         "price":150,
-        "image_url":"",
+        "image_url":[""],
     }
     
 ]

@@ -6,6 +6,7 @@ target 'rental_property' do
   use_frameworks!
   pod 'GoogleMaps', '7.4.0'
   pod "AlignedCollectionViewFlowLayout"
+  pod 'CHIPageControl', '~> 0.1.3'
   #pod 'Google-Maps-iOS-Utils', '~> 4.1.0'
   # Pods for rental_property
 
