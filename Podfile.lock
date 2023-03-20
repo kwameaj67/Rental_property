@@ -1,5 +1,22 @@
 PODS:
   - AlignedCollectionViewFlowLayout (1.1.2)
+  - CHIPageControl (0.1.8):
+    - CHIPageControl/Aji (= 0.1.8)
+    - CHIPageControl/Aleppo (= 0.1.8)
+    - CHIPageControl/Chimayo (= 0.1.8)
+    - CHIPageControl/Fresno (= 0.1.8)
+    - CHIPageControl/Jalapeno (= 0.1.8)
+    - CHIPageControl/Jaloro (= 0.1.8)
+    - CHIPageControl/Paprika (= 0.1.8)
+    - CHIPageControl/Puya (= 0.1.8)
+  - CHIPageControl/Aji (0.1.8)
+  - CHIPageControl/Aleppo (0.1.8)
+  - CHIPageControl/Chimayo (0.1.8)
+  - CHIPageControl/Fresno (0.1.8)
+  - CHIPageControl/Jalapeno (0.1.8)
+  - CHIPageControl/Jaloro (0.1.8)
+  - CHIPageControl/Paprika (0.1.8)
+  - CHIPageControl/Puya (0.1.8)
   - GoogleMaps (7.4.0):
     - GoogleMaps/Maps (= 7.4.0)
   - GoogleMaps/Base (7.4.0)
@@ -8,17 +25,20 @@ PODS:
 
 DEPENDENCIES:
   - AlignedCollectionViewFlowLayout
+  - CHIPageControl (~> 0.1.3)
   - GoogleMaps (= 7.4.0)
 
 SPEC REPOS:
   trunk:
     - AlignedCollectionViewFlowLayout
+    - CHIPageControl
     - GoogleMaps
 
 SPEC CHECKSUMS:
   AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  CHIPageControl: 76b35c8309d8dd155e869c109cc6ffc0aaa465ff
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
 
-PODFILE CHECKSUM: 7d045576a86de55c9152823e89e0629eca64a744
+PODFILE CHECKSUM: efd56102fe069f3fced3feb70fca020ec277e0e8
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

@@ -28,19 +28,23 @@ class LocationDetailView: UIView {
     // MARK: Properties -
     lazy var headingLbl: UILabel = {
         let lbl = UILabel(frame: .zero)
-        lbl.text = "Voltand Cottages"
+        lbl.text = "Woltsend Cottages"
         lbl.textColor = .black
-        lbl.font = custom(name: .semi_bold, size: 20, style: .headline)
+        lbl.font = custom(name: .semi_bold, size: 35, style: .headline)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     
 
     func setupViews(){
-        
+        addSubview(headingLbl)
     }
     
     func setupContraints(){
-        
+        NSLayoutConstraint.activate([
+            headingLbl.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            headingLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            headingLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+        ])
     }
 }
