@@ -47,6 +47,8 @@
 		65C43EE529B53F510022AF4F /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C43EE429B53F510022AF4F /* MapVC.swift */; };
 		65C43EEA29B53F530022AF4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C43EE929B53F530022AF4F /* Assets.xcassets */; };
 		65C43EED29B53F530022AF4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C43EEB29B53F530022AF4F /* LaunchScreen.storyboard */; };
+		65F307D329C9D96300205791 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F307D229C9D96300205791 /* UILabel+Ext.swift */; };
+		65F307D529C9DD8300205791 /* ConvenienceCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F307D429C9DD8300205791 /* ConvenienceCollectionView.swift */; };
 		A651AC2ACD444ACD17F90367 /* Pods_rental_property.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D87E5361B9019C1D0D6DD4 /* Pods_rental_property.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		65C43EE929B53F530022AF4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C43EEC29B53F530022AF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65C43EEE29B53F530022AF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65F307D229C9D96300205791 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		65F307D429C9DD8300205791 /* ConvenienceCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceCollectionView.swift; sourceTree = "<group>"; };
 		9260F04F402C9E9CEA2F5B01 /* Pods-rental_property.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rental_property.release.xcconfig"; path = "Target Support Files/Pods-rental_property/Pods-rental_property.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +183,7 @@
 				65103AE029B548B100394473 /* UIFont+Ext.swift */,
 				65103AE429B54C1800394473 /* UIColor+Ext.swift */,
 				650D805E29C4FA45001C82C8 /* Type+Ext.swift */,
+				65F307D229C9D96300205791 /* UILabel+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			children = (
 				6588D60229C06293001BFFC1 /* LocationDetailView.swift */,
 				6506CD1E29C661EF00E8A0D9 /* LocationCollectionView.swift */,
+				65F307D429C9DD8300205791 /* ConvenienceCollectionView.swift */,
 			);
 			path = LocationDetail;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65103AFA29B6804900394473 /* InfoView.swift in Sources */,
+				65F307D329C9D96300205791 /* UILabel+Ext.swift in Sources */,
 				650A4F2F29B918AC0050B6B3 /* PropertyDetail.swift in Sources */,
 				6588D5FE29BEEF9B001BFFC1 /* LocationDetailVC.swift in Sources */,
 				6506CD2129C6629D00E8A0D9 /* LocationImageCollectionViewCell.swift in Sources */,
@@ -480,6 +487,7 @@
 				65103AE329B54C0400394473 /* FilterVC.swift in Sources */,
 				650A4F4829BD2DBE0050B6B3 /* FilterFooterView.swift in Sources */,
 				65103AE129B548B100394473 /* UIFont+Ext.swift in Sources */,
+				65F307D529C9DD8300205791 /* ConvenienceCollectionView.swift in Sources */,
 				650A4F4429BCCA7A0050B6B3 /* FeatureCollectionViewCell.swift in Sources */,
 				650A4F4029BBB4C00050B6B3 /* GuestTableViewCell.swift in Sources */,
 				650A4F2D29B9184F0050B6B3 /* PropertyLocation.swift in Sources */,

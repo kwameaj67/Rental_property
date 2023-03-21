@@ -63,7 +63,7 @@ class LocationDetailVC: UIViewController {
     
     lazy var starBtn: UIButton = {
         let btn = UIButton()
-        let image = UIImage(named: "star")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 10))
+        let image = UIImage(systemName: "star")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 20,weight: .semibold))
         btn.setImage(image, for: .normal)
         btn.tintColor = .black
         btn.backgroundColor = .white

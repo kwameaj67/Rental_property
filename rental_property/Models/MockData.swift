@@ -42,3 +42,17 @@ struct LocationImage {
         LocationImage(image: "house3")
     ]
 }
+
+struct Feature{
+    var name: String
+    
+    static let data: [Feature] = [
+        Feature(name: "In the woods"),
+        Feature(name: "Lakes & Rivers"),
+        Feature(name: "Views"),
+        Feature(name: "Hot tubs"),
+        Feature(name: "TV"),
+        Feature(name: "Woodburner"),
+        Feature(name: "Family Friendly"),
+    ]
+}

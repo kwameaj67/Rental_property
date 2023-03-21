@@ -9,6 +9,12 @@ import UIKit
 
 class FeatureCollectionViewCell: UICollectionViewCell {
     
+    var data: Feature? {
+        didSet{
+            guard let item = data else { return }
+            lbl.text = item.name
+        }
+    }
     static let reusableID = "FeatureCollectionViewCell"
     
     override var isSelected: Bool{
@@ -46,7 +52,7 @@ class FeatureCollectionViewCell: UICollectionViewCell {
     lazy var lbl: UILabel = {
         let lbl = UILabel(frame: .zero)
         lbl.textColor = .black
-        lbl.font = custom(name: .regular, size: 18, style: .caption1)
+        lbl.font = custom(name: .regular, size: 16, style: .caption1)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()

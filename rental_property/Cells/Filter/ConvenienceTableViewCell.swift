@@ -21,7 +21,7 @@ class ConvenienceTableViewCell: UITableViewCell {
     
     static let reusableID = "ConvenienceTableViewCell"
     
-    let features:[String] = ["In the woods","Lakes & Rivers","Views","Hot tubs","TV","Woodburner","Family Friendly"]
+    let features:[Feature] = Feature.data
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: ConvenienceTableViewCell.reusableID)
@@ -51,8 +51,8 @@ class ConvenienceTableViewCell: UITableViewCell {
         let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left, verticalAlignment: .top)
         alignedFlowLayout.horizontalAlignment = .left
         alignedFlowLayout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-        alignedFlowLayout.minimumLineSpacing = 8
-        alignedFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize //.init(width: 60, height: 60)
+        alignedFlowLayout.minimumLineSpacing = 12
+        alignedFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let cv = UICollectionView(frame: .zero, collectionViewLayout: alignedFlowLayout)
         cv.register(FeatureCollectionViewCell.self, forCellWithReuseIdentifier: FeatureCollectionViewCell.reusableID)
         cv.backgroundColor = .none
@@ -97,7 +97,7 @@ extension ConvenienceTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeatureCollectionViewCell.reusableID, for: indexPath) as? FeatureCollectionViewCell else {
             fatalError("Cannot dequeue cell")
         }
-        cell.lbl.text = features[indexPath.row]
+        cell.data = features[indexPath.row]
         return cell
     }
     
@@ -109,7 +109,7 @@ extension ConvenienceTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         generateHapticTouch()
         let _ = collectionView.cellForItem(at: indexPath) as! FeatureCollectionViewCell
         let item = features[indexPath.row]
-        delegate?.selectConvenience(item: item)
+        delegate?.selectConvenience(item: item.name)
     }
     
 }

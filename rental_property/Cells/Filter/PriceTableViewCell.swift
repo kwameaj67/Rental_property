@@ -79,7 +79,7 @@ class PriceTableViewCell: UITableViewCell {
     lazy var propertyTextField : UITextField = {
         let tf = UITextField()
         tf.textColor = .black
-        tf.font = custom(name: .regular, size: 18, style: .caption1)
+        tf.font = custom(name: .regular, size: 16, style: .caption1)
         tf.attributedPlaceholder = NSMutableAttributedString(string: "Property Type",attributes: [.font: custom(name: .regular, size: 15, style: .headline),.foregroundColor: UIColor.systemGray3])
         tf.delegate = self
         tf.inputView = propertyPickerView

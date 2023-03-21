@@ -72,10 +72,10 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
             return CGFloat(200)
         }
         else if indexPath.row == row.convenience_section.rawValue {
-            return CGFloat(300)
+            return CGFloat(280)
         }
         else if indexPath.row == row.guests.rawValue {
-            return CGFloat(150)
+            return CGFloat(140)
         }
         return CGFloat()
     }
