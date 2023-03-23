@@ -11,6 +11,7 @@ import CoreLocation
 
 class MapVC: UIViewController {
 
+    let netowrkManager = NetworkManager.shared
     let manager = CLLocationManager()
     var coordinate = CLLocationCoordinate2D()
     var circle = GMSCircle()
@@ -106,6 +107,17 @@ class MapVC: UIViewController {
                 marker.map = self.mapView
             }
         })
+    }
+    
+    func fetchLocations(){
+        netowrkManager.fetchLocation { results, error in
+            if let err = error {
+                print("DEBUG: \(err.localizedDescription)")
+            }
+            guard let data = results else { return }
+            
+            print(data)
+        }
     }
     
     func setupViews(){
