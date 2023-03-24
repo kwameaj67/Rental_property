@@ -123,7 +123,6 @@ class GuestTableViewCell: UITableViewCell {
             
             numberLbl.centerYAnchor.constraint(equalTo: numberView.centerYAnchor),
             numberLbl.centerXAnchor.constraint(equalTo: numberView.centerXAnchor),
-
         ])
     }
     

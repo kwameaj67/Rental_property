@@ -9,8 +9,9 @@ import Foundation
 
 
 struct PropertyLocation: Decodable {
+    var id: Int
     var name: String
-    var coordinate: Coordinate
+    var coordinates: Coordinate
     
     struct Coordinate: Decodable {
         var latitude: Double

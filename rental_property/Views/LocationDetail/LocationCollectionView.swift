@@ -11,7 +11,13 @@ import CHIPageControl
 
 class LocationCollectionView: UIView {
     
-    var images: [LocationImage] = []
+    var images: [String] = []{
+        didSet{
+            print(images)
+            pageControl.numberOfPages = images.count
+            imageCollectionView.reloadData()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,7 +39,7 @@ class LocationCollectionView: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.setCollectionViewLayout(layout, animated: true)
         cv.register(LocationImageCollectionViewCell.self, forCellWithReuseIdentifier: LocationImageCollectionViewCell.reusableID)
-        cv.backgroundColor = .red
+        cv.backgroundColor = .none
         cv.delegate = self
         cv.dataSource = self
         cv.isPagingEnabled = true
@@ -61,10 +67,11 @@ class LocationCollectionView: UIView {
         let v = UIView(frame: .zero)
         v.backgroundColor = .black
         v.alpha = 0.4
-        v.layer.cornerRadius = 30/2
+        v.layer.cornerRadius = 34/2
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
+    
     func setupViews(){
         addSubview(imageCollectionView)
         addSubview(pageControlView)
@@ -80,12 +87,13 @@ class LocationCollectionView: UIView {
             
             pageControlView.bottomAnchor.constraint(equalTo: imageCollectionView.bottomAnchor, constant: -100),
             pageControlView.centerXAnchor.constraint(equalTo: imageCollectionView.centerXAnchor),
-            pageControlView.heightAnchor.constraint(equalToConstant: 30),
-            pageControlView.widthAnchor.constraint(equalToConstant: 65),
+            pageControlView.heightAnchor.constraint(equalToConstant: 34),
+            pageControlView.widthAnchor.constraint(equalToConstant: 80),
             
             pageControl.centerYAnchor.constraint(equalTo: pageControlView.centerYAnchor),
             pageControl.centerXAnchor.constraint(equalTo: pageControlView.centerXAnchor),
         ])
+        
     }
 }
 
@@ -99,7 +107,8 @@ extension LocationCollectionView: UICollectionViewDelegate, UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocationImageCollectionViewCell.reusableID, for: indexPath) as? LocationImageCollectionViewCell else {
             fatalError("Cannot dequeue cell")
         }
-        cell.data = images[indexPath.row]
+        let imageName = images[indexPath.row]
+        cell.locationImage.image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
         return cell
     }
     

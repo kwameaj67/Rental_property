@@ -10,13 +10,7 @@ import UIKit
 class LocationImageCollectionViewCell: UICollectionViewCell {
     
     static let reusableID = "LocationImageCollectionViewCell"
-    
-    var data: LocationImage? {
-        didSet{
-            manageData()
-        }
-    }
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -35,14 +29,9 @@ class LocationImageCollectionViewCell: UICollectionViewCell {
     lazy var locationImage : UIImageView = {
         var iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = .red
+        iv.backgroundColor = .systemGray5
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
 
-    
-    func manageData(){
-        guard let item = data else { return }
-        locationImage.image = UIImage(named: "\(item.image)")?.withRenderingMode(.alwaysOriginal)
-    }
 }

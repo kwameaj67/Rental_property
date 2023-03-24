@@ -8,6 +8,11 @@
 import Foundation
 
 
+enum NetworkError: Error{
+    case badData
+    case badURL
+}
+
 class NetworkManager{
     
     static let shared = NetworkManager()
@@ -31,7 +36,10 @@ class NetworkManager{
     func fetchLocation(completion: @escaping ([PropertyLocation]?, Error?) -> Void){
         let data = readFile(from: "locations")
         
-        guard let data = data else { return }
+        guard let data = data else {
+            completion(nil, NetworkError.badData)
+            return
+        }
         
         do{
             let results = try JSONDecoder().decode([PropertyLocation].self,from: data)
@@ -39,6 +47,7 @@ class NetworkManager{
         }
         catch(let err)
         {
+            print("Error:\(err.localizedDescription)")
             completion(nil,err)
         }
     }

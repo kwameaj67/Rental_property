@@ -2,7 +2,7 @@
     {
         "id":1,
         "name":"Ajax Park 3",
-        "cordinates": {
+        "coordinates": {
             "latitude":5.6429215,
             "longitude":-0.1800884
         }
@@ -10,7 +10,7 @@
     {
         "id":2,
         "name":"Tickles Food Court",
-        "cordinates": {
+        "coordinates": {
             "latitude":5.6355777,
             "longitude":-0.182141
         }
@@ -18,7 +18,7 @@
     {
         "id":3,
         "name":"Nestle Ghana",
-        "cordinates": {
+        "coordinates": {
             "latitude":5.6341515,
             "longitude":-0.180733
         }
@@ -26,7 +26,7 @@
     {
         "id":4,
         "name":"Noguchi Memorial Institute for Medical Research",
-        "cordinates": {
+        "coordinates": {
             "latitude":5.6304567,
             "longitude":-0.1777776
         }
@@ -34,8 +34,16 @@
     {
         "id":5,
         "name":"Ghana Standards Authority",
-        "cordinates": {
+        "coordinates": {
             "latitude":5.6298216,
+            "longitude":-0.1743329
+        }
+    },
+    {
+        "id":6,
+        "name":"Peace Authority",
+        "coordinates": {
+            "latitude":5.5998216,
             "longitude":-0.1743329
         }
     }

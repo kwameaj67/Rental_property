@@ -10,7 +10,11 @@ import UIKit
 
 class LocationDetailVC: UIViewController {
     
+    let netowrkManager = NetworkManager.shared
+    
     let data: [LocationImage] = LocationImage.data
+    
+    var location_id: Int = 0 
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
@@ -21,13 +25,14 @@ class LocationDetailVC: UIViewController {
         setupViews()
         setupConstraints()
         view.backgroundColor = .white
+        fetchPropertyDetail()
     }
     
     
     // MARK: Properties -
     lazy var container: UIView = {
         let v = UIView(frame: .zero)
-        v.backgroundColor = .red
+        v.backgroundColor = .none
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
@@ -40,7 +45,6 @@ class LocationDetailVC: UIViewController {
     
     lazy var locationImage : LocationCollectionView = {
         var iv = LocationCollectionView()
-        iv.images = data
         return iv
     }()
     
@@ -77,6 +81,7 @@ class LocationDetailVC: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
+    
     lazy var locationDetailView: LocationDetailView = {
         let v = LocationDetailView(frame: .zero)
         v.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -84,7 +89,28 @@ class LocationDetailVC: UIViewController {
         return v
     }()
 
-    // MARK: Selectors
+    // MARK: API -
+    func fetchPropertyDetail(){
+        netowrkManager.fetchPropertyDetail(property_id: location_id) { data, error in
+            if let err = error {
+                print("DEBUG: Error \(err.localizedDescription)")
+            }
+            guard let data = data else { return }
+
+            // update UI
+            DispatchQueue.main.async {
+                self.locationImage.images = data.image_url
+                self.locationDetailView.headingLbl.text = data.name
+                self.locationDetailView.locationLbl.text = data.location
+                self.locationDetailView.descriptionLbl.text = data.description
+                self.locationDetailView.guestLbl.text = "\(data.guests) sleeps"
+                self.locationDetailView.collectionView.features = data.features
+                self.locationDetailView.priceLbl.attributedText = self.locationDetailView.setAttibutedText(data.price, "night")
+            }
+        }
+    }
+    
+    // MARK: Selectors -
     @objc func handleBackBtn(){
         generateHapticTouch()
         dismiss(animated: true)

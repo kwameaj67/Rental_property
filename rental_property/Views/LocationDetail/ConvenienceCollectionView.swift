@@ -9,7 +9,11 @@ import UIKit
 
 class ConvenienceCollectionView: UIView {
     
-    let features:[Feature] = Feature.data
+    var features:[String] = []{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,11 +80,7 @@ extension ConvenienceCollectionView: UICollectionViewDelegate, UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeatureCollectionViewCell.reusableID, for: indexPath) as? FeatureCollectionViewCell else {
             fatalError("Cannot dequeue cell")
         }
-//        cell.layer.shadowColor = .none
-//        cell.layer.shadowOpacity = 0
-//        cell.layer.shadowRadius = 0
-//        cell.layer.shadowOffset = .zero
-        cell.data = features[indexPath.row]
+        cell.lbl.text = features[indexPath.row]
         return cell
     }
     

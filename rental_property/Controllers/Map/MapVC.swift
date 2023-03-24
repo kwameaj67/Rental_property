@@ -17,7 +17,7 @@ class MapVC: UIViewController {
     var circle = GMSCircle()
     var mapView = GMSMapView()
     var marker = GMSMarker()
-    let data = Marker.data
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .darkContent
@@ -29,9 +29,12 @@ class MapVC: UIViewController {
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        
+        fetchLocations()
         setupMapView()
         setupViews()
         setupContraints()
+        
     }
 
     // MARK: Properties -
@@ -92,31 +95,28 @@ class MapVC: UIViewController {
         marker.icon = sizeImage(image!, scaledToSize: .init(width: 40, height: 40))
         marker.tracksViewChanges = true
         marker.map = mapView
-        
-        //show markers
-        DispatchQueue.main.async(execute: {
-            self.data.forEach { item in
-                let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: item.lat, longitude: item.lng))
-                marker.title = item.name
-                marker.tracksViewChanges = false
-//                marker.iconView = self.infoView
-                marker.icon = sizeImage((UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal))!, scaledToSize: .init(width: 50, height: 50))
-                marker.isFlat = true
-//                self.infoView.markerDetail = item
-//                print("DEBUG:Labels \(self.infoViewx.markerDetail)")
-                marker.map = self.mapView
-            }
-        })
+             
     }
-    
-    func fetchLocations(){
+    // MARK: API's -
+    func fetchLocations() {
+        //fetch locations and show markers
         netowrkManager.fetchLocation { results, error in
             if let err = error {
                 print("DEBUG: \(err.localizedDescription)")
             }
             guard let data = results else { return }
             
-            print(data)
+            DispatchQueue.main.async(execute: {
+                data.forEach { item in
+                    let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: item.coordinates.latitude, longitude: item.coordinates.longitude))
+                    marker.title = item.name
+                    marker.tracksViewChanges = false
+                    marker.icon = sizeImage((UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal))!, scaledToSize: .init(width: 50, height: 50))
+                    marker.isFlat = true
+                    marker.userData = item
+                    marker.map = self.mapView
+                }
+            })
         }
     }
     

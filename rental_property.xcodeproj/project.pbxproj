@@ -40,6 +40,8 @@
 		65103AF829B67A6C00394473 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF729B67A6C00394473 /* Helpers.swift */; };
 		65103AFA29B6804900394473 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65103AF929B6804900394473 /* InfoView.swift */; };
 		6545E94229CCBDA20083B1FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545E94129CCBDA20083B1FD /* NetworkManager.swift */; };
+		6545E94329CD9F240083B1FD /* property-detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 650A4F2B29B9160B0050B6B3 /* property-detail.json */; };
+		6545E94429CD9F240083B1FD /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 650A4F2A29B914B20050B6B3 /* locations.json */; };
 		6588D5FE29BEEF9B001BFFC1 /* LocationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588D5FD29BEEF9B001BFFC1 /* LocationDetailVC.swift */; };
 		6588D60029BEEFF7001BFFC1 /* LocationDetailVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588D5FF29BEEFF7001BFFC1 /* LocationDetailVC+Delegates.swift */; };
 		6588D60329C06293001BFFC1 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588D60229C06293001BFFC1 /* LocationDetailView.swift */; };
@@ -411,6 +413,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6545E94329CD9F240083B1FD /* property-detail.json in Resources */,
+				6545E94429CD9F240083B1FD /* locations.json in Resources */,
 				65103AE729B5795B00394473 /* map.json in Resources */,
 				65103AD529B5424600394473 /* Outfit-Bold.ttf in Resources */,
 				65103AD629B5424600394473 /* Outfit-Light.ttf in Resources */,

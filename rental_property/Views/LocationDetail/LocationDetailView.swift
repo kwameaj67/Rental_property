@@ -70,7 +70,7 @@ class LocationDetailView: UIView {
         let lbl = UILabel(frame: .zero)
         lbl.text = "Situated in the picturesque area called Breckland in South Norfolk. Woldsend is location in one of the driest terrains in the UK."
         lbl.textColor = .black
-        //lbl.backgroundColor = .red
+        //lbl.backgroundColor = .none
         lbl.numberOfLines = 3
         lbl.setLineHeight(lineHeight: 1.8)
         lbl.font = custom(name: .regular, size: 16, style: .headline)

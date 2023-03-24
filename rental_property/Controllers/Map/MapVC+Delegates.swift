@@ -33,9 +33,10 @@ extension MapVC : GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        let coordinate = marker.position
-        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
+        let data = marker.userData as! PropertyLocation
+        //print("You tapped at \(data)")
         let vc = LocationDetailVC()
+        vc.location_id = data.id
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true)
         return true
