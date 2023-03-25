@@ -34,7 +34,6 @@ class MapVC: UIViewController {
         setupMapView()
         setupViews()
         setupContraints()
-        
     }
 
     // MARK: Properties -
@@ -55,7 +54,8 @@ class MapVC: UIViewController {
         v.delegate = self
         return v
     }()
-    let markerLbl: UILabel = {
+    
+    lazy var markerLbl: UILabel = {
         let lbl = UILabel(frame: .zero)
         lbl.textColor = .black
         lbl.font = custom(name: .medium, size: 16, style: .caption1)
@@ -105,6 +105,7 @@ class MapVC: UIViewController {
                 print("DEBUG: \(err.localizedDescription)")
             }
             guard let data = results else { return }
+            var dict = [String: Int]()
             
             DispatchQueue.main.async(execute: {
                 data.forEach { item in
@@ -113,7 +114,8 @@ class MapVC: UIViewController {
                     marker.tracksViewChanges = false
                     marker.icon = sizeImage((UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal))!, scaledToSize: .init(width: 50, height: 50))
                     marker.isFlat = true
-                    marker.userData = item
+                    dict["id"] = item.id
+                    marker.userData = dict
                     marker.map = self.mapView
                 }
             })

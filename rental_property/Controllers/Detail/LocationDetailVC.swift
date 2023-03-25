@@ -8,13 +8,13 @@
 import UIKit
 
 
-class LocationDetailVC: UIViewController {
+class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate {
     
     let netowrkManager = NetworkManager.shared
     
     let data: [LocationImage] = LocationImage.data
     
-    var location_id: Int = 0 
+    var location_id: Int = 0
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
@@ -26,9 +26,40 @@ class LocationDetailVC: UIViewController {
         setupConstraints()
         view.backgroundColor = .white
         fetchPropertyDetail()
+        
+        let gestureRecognizer = UIPanGestureRecognizer(target: self,
+                                                           action: #selector(panGestureRecognizerHandler(_:)))
+        view.addGestureRecognizer(gestureRecognizer)
     }
     
-    
+    @objc func panGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
+        let touchPoint = sender.location(in: view?.window)
+        var initialTouchPoint = CGPoint.zero
+
+        switch sender.state {
+        case .began:
+            initialTouchPoint = touchPoint
+        case .changed:
+            if touchPoint.y > initialTouchPoint.y {
+                view.frame.origin.y = touchPoint.y - initialTouchPoint.y
+            }
+        case .ended, .cancelled:
+            if touchPoint.y - initialTouchPoint.y > 200 {
+                dismiss(animated: true, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.view.frame = CGRect(x: 0,
+                                             y: 0,
+                                             width: self.view.frame.size.width,
+                                             height: self.view.frame.size.height)
+                })
+            }
+        case .failed, .possible:
+            break
+        @unknown default:
+            break
+        }
+    }
     // MARK: Properties -
     lazy var container: UIView = {
         let v = UIView(frame: .zero)
@@ -131,7 +162,7 @@ class LocationDetailVC: UIViewController {
     
     func setupConstraints(){
         container.pinToEdges(to: view)
-        locationImage.pinToEdges(to: imageView)
+        imageView.pinToEdges(to: locationImage)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: container.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: container.leadingAnchor),

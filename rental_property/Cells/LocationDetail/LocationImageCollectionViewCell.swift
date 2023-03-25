@@ -15,6 +15,7 @@ class LocationImageCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         addSubview(locationImage)
+        locationImage.layer.shouldRasterize = true
         
         locationImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
         locationImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
@@ -29,6 +30,7 @@ class LocationImageCollectionViewCell: UICollectionViewCell {
     lazy var locationImage : UIImageView = {
         var iv = UIImageView()
         iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = false
         iv.backgroundColor = .systemGray5
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv

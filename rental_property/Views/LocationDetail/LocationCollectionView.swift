@@ -11,11 +11,20 @@ import CHIPageControl
 
 class LocationCollectionView: UIView {
     
+    var WIDTH_ANCHOR: CGFloat = 70.0
+    
     var images: [String] = []{
         didSet{
-            print(images)
+            //print(images)
             pageControl.numberOfPages = images.count
             imageCollectionView.reloadData()
+            
+            if images.count > 4 {
+                pageControlView.widthAnchor.constraint(equalToConstant: WIDTH_ANCHOR + 25).isActive = true
+            }
+            else {
+                pageControlView.widthAnchor.constraint(equalToConstant: WIDTH_ANCHOR).isActive = true
+            }
         }
     }
     
@@ -35,7 +44,7 @@ class LocationCollectionView: UIView {
     lazy var imageCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 0
+        layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.setCollectionViewLayout(layout, animated: true)
         cv.register(LocationImageCollectionViewCell.self, forCellWithReuseIdentifier: LocationImageCollectionViewCell.reusableID)
@@ -88,7 +97,7 @@ class LocationCollectionView: UIView {
             pageControlView.bottomAnchor.constraint(equalTo: imageCollectionView.bottomAnchor, constant: -100),
             pageControlView.centerXAnchor.constraint(equalTo: imageCollectionView.centerXAnchor),
             pageControlView.heightAnchor.constraint(equalToConstant: 34),
-            pageControlView.widthAnchor.constraint(equalToConstant: 80),
+            
             
             pageControl.centerYAnchor.constraint(equalTo: pageControlView.centerYAnchor),
             pageControl.centerXAnchor.constraint(equalTo: pageControlView.centerXAnchor),
@@ -116,8 +125,13 @@ extension LocationCollectionView: UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(10)
+    }
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x
         pageControl.set(progress: Int( x / imageCollectionView.frame.width), animated: true)
     }
+    
+    
 }

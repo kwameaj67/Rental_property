@@ -174,7 +174,6 @@
 				6588D5FC29BEEF7E001BFFC1 /* Detail */,
 				650A4F3529BA06A70050B6B3 /* Filter */,
 				65103AF329B644B000394473 /* Map */,
-				6588D5FF29BEEFF7001BFFC1 /* LocationDetailVC+Delegates.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				6588D5FD29BEEF9B001BFFC1 /* LocationDetailVC.swift */,
+				6588D5FF29BEEFF7001BFFC1 /* LocationDetailVC+Delegates.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -669,10 +669,13 @@
 				DEVELOPMENT_TEAM = 445LZL99JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rental_property/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need permission";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -700,10 +703,13 @@
 				DEVELOPMENT_TEAM = 445LZL99JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rental_property/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need permission";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

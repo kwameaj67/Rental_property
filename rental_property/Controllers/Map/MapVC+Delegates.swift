@@ -33,15 +33,16 @@ extension MapVC : GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        let data = marker.userData as! PropertyLocation
-        //print("You tapped at \(data)")
-        let vc = LocationDetailVC()
-        vc.location_id = data.id
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true)
+        guard let data = marker.userData as? [String: Int] else { return false}
+        if let id = data["id"] {
+            //print("You tapped at \(data)")
+            let vc = LocationDetailVC()
+            vc.location_id = id
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true)
+        }
         return true
     }
-   
 }
 
 // MARK: UIToolbar -
@@ -91,3 +92,6 @@ extension MapVC: DidTapFilterButtonDelegate {
         present(vc, animated: true)
     }
 }
+
+
+

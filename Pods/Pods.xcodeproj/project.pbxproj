@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = GoogleMaps;
+			productName = GoogleMaps;
 		};
 /* End PBXAggregateTarget section */
 
@@ -73,15 +74,15 @@
 		160A4C2FF22E58F6735A7FF9BCCE8683 /* CHIPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CHIPageControl.modulemap; sourceTree = "<group>"; };
 		22300D63C72CE4FAB752E2F157F6372C /* CHIPageControlAji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAji.swift; path = CHIPageControl/CHIPageControlAji.swift; sourceTree = "<group>"; };
 		25277D73958C49500767CEC19032B7B0 /* CHIPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHIPageControl-dummy.m"; sourceTree = "<group>"; };
-		298D4A7CF93A390C9433449489595C59 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMapsCore.xcframework; path = Maps/Frameworks/GoogleMapsCore.xcframework; sourceTree = "<group>"; };
+		298D4A7CF93A390C9433449489595C59 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMapsCore.xcframework; path = Maps/Frameworks/GoogleMapsCore.xcframework; sourceTree = "<group>"; };
 		2AC1FB8C4A064F451AF1AFBA14B41057 /* Pods-rental_property.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-rental_property.release.xcconfig"; sourceTree = "<group>"; };
 		3D75035F3FE2C01FCF42FCDCFC44191E /* Pods-rental_property-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-rental_property-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3E1DD4603FBFF5C5F22DF2C2964FC4DF /* Pods-rental_property-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-rental_property-dummy.m"; sourceTree = "<group>"; };
 		40705E46147449FEE890E638E78D0D3B /* GoogleMaps-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleMaps-xcframeworks.sh"; sourceTree = "<group>"; };
-		444DF007FF0C1B0ED57E2B20B340447D /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMapsBase.xcframework; path = Base/Frameworks/GoogleMapsBase.xcframework; sourceTree = "<group>"; };
+		444DF007FF0C1B0ED57E2B20B340447D /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMapsBase.xcframework; path = Base/Frameworks/GoogleMapsBase.xcframework; sourceTree = "<group>"; };
 		44FC1764BC1B95DAAC2404DCF938AFB2 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "Maps/Frameworks/GoogleMaps.xcframework/ios-arm64/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CHIPageControl; path = CHIPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlignedCollectionViewFlowLayout; path = AlignedCollectionViewFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHIPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlignedCollectionViewFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		535F575D7EE51E6D8EA8D0554499C9C0 /* CHIPageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.release.xcconfig; sourceTree = "<group>"; };
 		575134C73FCBD1BDC450CD2DDFDBC3F5 /* CHIPageControlAleppo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlAleppo.swift; path = CHIPageControl/CHIPageControlAleppo.swift; sourceTree = "<group>"; };
 		5F262DE72B1696A7338D3ED2E7786F9D /* CHIPageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHIPageControl.debug.xcconfig; sourceTree = "<group>"; };
@@ -95,10 +96,10 @@
 		8C118CA418E7154A79203571B828DAD1 /* AlignedCollectionViewFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlignedCollectionViewFlowLayout-dummy.m"; sourceTree = "<group>"; };
 		912673B44384C2D8E2CF34A32BCA28C1 /* Pods-rental_property-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-rental_property-frameworks.sh"; sourceTree = "<group>"; };
 		9B59984050A82B97019692E55AFD614D /* CHIPageControlPaprika.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlPaprika.swift; path = CHIPageControl/CHIPageControlPaprika.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0A17E8A084DA93BB42C0BB4573821CC /* AlignedCollectionViewFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlignedCollectionViewFlowLayout.modulemap; sourceTree = "<group>"; };
 		A0CB2CEB6ABC5BA278F8A790F4AA8730 /* AlignedCollectionViewFlowLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlignedCollectionViewFlowLayout.debug.xcconfig; sourceTree = "<group>"; };
-		A0F97374E7EDDC173136FA3B94B6201F /* GoogleMaps.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMaps.xcframework; path = Maps/Frameworks/GoogleMaps.xcframework; sourceTree = "<group>"; };
+		A0F97374E7EDDC173136FA3B94B6201F /* GoogleMaps.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMaps.xcframework; path = Maps/Frameworks/GoogleMaps.xcframework; sourceTree = "<group>"; };
 		A2CC819B9FDF2F16559BD6B3512261BE /* Pods-rental_property */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-rental_property"; path = Pods_rental_property.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADECB8728FB079AB4737637B57AF1BE2 /* CHIPageControlChimayo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CHIPageControlChimayo.swift; path = CHIPageControl/CHIPageControlChimayo.swift; sourceTree = "<group>"; };
 		AED01442164CF1ACD783B210E8349BE9 /* Pods-rental_property-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-rental_property-Info.plist"; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 				D77C7EFFB31731910EA34D97737766E2 /* Puya */,
 				B398B9DAD8CED0C5FF6786BD636FE545 /* Support Files */,
 			);
-			name = CHIPageControl;
 			path = CHIPageControl;
 			sourceTree = "<group>";
 		};
@@ -223,7 +223,6 @@
 				B195CBCA8C8931EEE9D6AF12D875A301 /* AlignedCollectionViewFlowLayout.swift */,
 				9C906459AA4CC6065958826A1F5D4CE4 /* Support Files */,
 			);
-			name = AlignedCollectionViewFlowLayout;
 			path = AlignedCollectionViewFlowLayout;
 			sourceTree = "<group>";
 		};
@@ -256,7 +255,6 @@
 				134AD85F6C76F78C304E960F0CF57D5C /* Maps */,
 				A09FFA005BBB90B5A50275083E66FA8C /* Support Files */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -361,8 +359,8 @@
 		BA6C778BB6ED602357AB64B6608B7830 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout */,
-				4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */,
+				50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout.framework */,
+				4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl.framework */,
 				A2CC819B9FDF2F16559BD6B3512261BE /* Pods-rental_property */,
 			);
 			name = Products;
@@ -475,7 +473,7 @@
 			);
 			name = CHIPageControl;
 			productName = CHIPageControl;
-			productReference = 4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl */;
+			productReference = 4A90E991BC0CB35AB6D91E18C9490643 /* CHIPageControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		87D05745DDD56D2B5D9CAB788154BF15 /* AlignedCollectionViewFlowLayout */ = {
@@ -493,7 +491,7 @@
 			);
 			name = AlignedCollectionViewFlowLayout;
 			productName = AlignedCollectionViewFlowLayout;
-			productReference = 50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout */;
+			productReference = 50605A0BD64225275A4D23F72262BDE4 /* AlignedCollectionViewFlowLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -683,7 +681,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -784,7 +782,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CHIPageControl/CHIPageControl-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CHIPageControl/CHIPageControl-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -936,7 +934,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CHIPageControl/CHIPageControl-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CHIPageControl/CHIPageControl-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -988,7 +986,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
