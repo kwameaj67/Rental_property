@@ -27,8 +27,8 @@ class InfoView: UIView {
         NSLayoutConstraint.activate([
             icon.topAnchor.constraint(equalTo: topAnchor, constant: 2),
             icon.centerXAnchor.constraint(equalTo: centerXAnchor),
-            icon.widthAnchor.constraint(equalToConstant: 35),
-            icon.heightAnchor.constraint(equalToConstant: 35),
+            icon.widthAnchor.constraint(equalToConstant: 28),
+            icon.heightAnchor.constraint(equalToConstant: 28),
             
 //            titleLbl.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -2),
 //            titleLbl.leadingAnchor.constraint(equalTo: leadingAnchor),

@@ -17,7 +17,8 @@ class MapVC: UIViewController {
     var circle = GMSCircle()
     var mapView = GMSMapView()
     var marker = GMSMarker()
-    
+    var locations = [PropertyLocation]()
+    var allMarkers = [GMSMarker]()
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .darkContent
@@ -34,6 +35,9 @@ class MapVC: UIViewController {
         setupMapView()
         setupViews()
         setupContraints()
+        
+        
+        
     }
 
     // MARK: Properties -
@@ -62,9 +66,85 @@ class MapVC: UIViewController {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
-    lazy var infoView = InfoView(frame: .zero)
+    
+    //lazy var infoView = InfoView(frame: .zero)
         
+    lazy var backBtn: UIButton = {
+        let btn = UIButton()
+        btn.setImage(UIImage(systemName: "arrow.left")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 20,weight: .semibold)), for: .normal)
+        btn.tintColor = .black
+        btn.isHidden = true
+        btn.alpha = 0
+        btn.backgroundColor = .white
+        btn.layer.cornerRadius = 50/2
+        btn.addTarget(self, action: #selector(handleBackBtn), for: .primaryActionTriggered)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    
+    lazy var bottomView: BottomView = {
+        let v = BottomView(frame: .zero)
+        v.isHidden = true
+        v.alpha = 0
+        v.delegate = self
+        v.controller = self
+        v.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height/2)
+        return v
+    }()
 
+    
+    // MARK: Selectors -
+    @objc func handleBackBtn(){
+        generateHapticTouch()
+        UIView.animate(withDuration: 0.3) {
+            self.searchView.alpha = 1
+            self.profileView.alpha = 1
+            self.gpsView.alpha = 1
+            self.backBtn.alpha = 0
+            self.bottomView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height/2)
+            
+        } completion: { _ in
+            self.searchView.isHidden = false
+            self.profileView.isHidden = false
+            self.gpsView.isHidden = false
+            self.backBtn.isHidden = true
+            self.bottomView.isHidden = true
+            self.bottomView.alpha = 0
+        }
+        fetchLocations()  // reset all markers on mapview
+    }
+    
+    // MARK: API's -
+    func fetchLocations() {
+        //fetch locations and show markers
+        netowrkManager.fetchLocation { results, error in
+            if let err = error {
+                print("DEBUG: \(err.localizedDescription)")
+            }
+            guard let data = results else { return }
+            var dict = [String: Any]()
+            self.locations = data
+            
+            DispatchQueue.main.async(execute: {
+                self.locations.forEach { item in
+                    let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: item.coordinates.latitude, longitude: item.coordinates.longitude))
+                    marker.title = item.name
+                    marker.tracksViewChanges = false
+                    marker.icon = sizeImage((UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal))!, scaledToSize: .init(width: 38, height: 38))
+                    marker.isFlat = true
+                    dict["id"] = item.id
+                    dict["name"] = item.name
+                    dict["lat"] = item.coordinates.latitude
+                    dict["lng"] = item.coordinates.longitude
+                    marker.userData = dict
+                    marker.map = self.mapView
+                    
+                    self.allMarkers.append(marker)
+                }
+            })
+        }
+    }
+    
     func setupMapView(){
         // mapview
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
@@ -97,41 +177,24 @@ class MapVC: UIViewController {
         marker.map = mapView
              
     }
-    // MARK: API's -
-    func fetchLocations() {
-        //fetch locations and show markers
-        netowrkManager.fetchLocation { results, error in
-            if let err = error {
-                print("DEBUG: \(err.localizedDescription)")
-            }
-            guard let data = results else { return }
-            var dict = [String: Int]()
-            
-            DispatchQueue.main.async(execute: {
-                data.forEach { item in
-                    let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: item.coordinates.latitude, longitude: item.coordinates.longitude))
-                    marker.title = item.name
-                    marker.tracksViewChanges = false
-                    marker.icon = sizeImage((UIImage(named: "circle")?.withRenderingMode(.alwaysOriginal))!, scaledToSize: .init(width: 50, height: 50))
-                    marker.isFlat = true
-                    dict["id"] = item.id
-                    marker.userData = dict
-                    marker.map = self.mapView
-                }
-            })
-        }
-    }
     
     func setupViews(){
         view.addSubview(searchView)
         mapView.bringSubviewToFront(searchView)
         view.addSubview(profileView)
         view.addSubview(gpsView)
-        mapView.addSubview(infoView)
+        view.addSubview(backBtn)
+        view.addSubview(bottomView)
     }
     
     func setupContraints(){
         NSLayoutConstraint.activate([
+            
+            backBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
+            backBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            backBtn.widthAnchor.constraint(equalToConstant: 50),
+            backBtn.heightAnchor.constraint(equalToConstant: 50),
+            
             searchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
             searchView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             searchView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
@@ -147,8 +210,10 @@ class MapVC: UIViewController {
             gpsView.heightAnchor.constraint(equalToConstant: 58),
             gpsView.widthAnchor.constraint(equalToConstant: 58),
             
-            infoView.heightAnchor.constraint(equalToConstant: 60),
-            infoView.widthAnchor.constraint(equalToConstant: 120),
+            bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.23)
         ])
     }
 }
