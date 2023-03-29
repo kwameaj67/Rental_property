@@ -62,6 +62,7 @@ class ConvenienceTableViewCell: UITableViewCell {
         cv.allowsMultipleSelection = true
         cv.isUserInteractionEnabled = true
         cv.bounces = true
+        cv.isScrollEnabled = false
         cv.showsHorizontalScrollIndicator = false
         cv.showsVerticalScrollIndicator = false
         cv.translatesAutoresizingMaskIntoConstraints = false
@@ -111,5 +112,4 @@ extension ConvenienceTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         let item = features[indexPath.row]
         delegate?.selectConvenience(item: item.name)
     }
-    
 }

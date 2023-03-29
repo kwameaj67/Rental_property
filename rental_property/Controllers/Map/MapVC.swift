@@ -139,7 +139,7 @@ class MapVC: UIViewController {
                     marker.userData = dict
                     marker.map = self.mapView
                     
-                    self.allMarkers.append(marker)
+                    self.allMarkers.append(marker) // store all markers
                 }
             })
         }

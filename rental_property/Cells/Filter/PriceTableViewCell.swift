@@ -131,7 +131,7 @@ class PriceTableViewCell: UITableViewCell {
             fromTextField.heightAnchor.constraint(equalTo: textFieldStackView.heightAnchor),
             toTextField.heightAnchor.constraint(equalTo: textFieldStackView.heightAnchor),
             
-            propertyView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
+            propertyView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 20),
             propertyView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             propertyView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             propertyView.heightAnchor.constraint(equalToConstant: 60),

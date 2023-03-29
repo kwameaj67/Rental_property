@@ -69,13 +69,13 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == row.price_section.rawValue {
-            return CGFloat(200)
+            return CGFloat(190)
         }
         else if indexPath.row == row.convenience_section.rawValue {
-            return CGFloat(280)
+            return CGFloat(620)
         }
         else if indexPath.row == row.guests.rawValue {
-            return CGFloat(140)
+            return CGFloat(130)
         }
         return CGFloat()
     }

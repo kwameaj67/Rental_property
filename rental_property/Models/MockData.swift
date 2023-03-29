@@ -47,12 +47,29 @@ struct Feature{
     var name: String
     
     static let data: [Feature] = [
-        Feature(name: "In the woods"),
-        Feature(name: "Lakes & Rivers"),
-        Feature(name: "Views"),
-        Feature(name: "Hot tubs"),
+        Feature(name: "Extra Space"),
         Feature(name: "TV"),
+        Feature(name: "In the woods"),
+        Feature(name: "Storage Area"),
+        Feature(name: "Large Windows"),
+        Feature(name: "Views"),
+        Feature(name: "Hot Tubs"),
+        Feature(name: "Huge Bathroom"),
+        Feature(name: "Open Floor"),
         Feature(name: "Woodburner"),
+        Feature(name: "Ensuite Bedrooms"),
+        Feature(name: "Fruit Trees"),
+        Feature(name: "Garage"),
+        Feature(name: "Swimming Pool"),
+        Feature(name: "Dining Room"),
+        Feature(name: "Natural Light"),
+        Feature(name: "Balconies"),
+        Feature(name: "Private Roof Tops"),
+        Feature(name: "Master Suites"),
+        Feature(name: "Ample Parking"),
         Feature(name: "Family Friendly"),
+        
+       
+       
     ]
 }

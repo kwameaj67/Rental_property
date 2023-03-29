@@ -35,8 +35,8 @@ class FeatureCollectionViewCell: UICollectionViewCell {
         // shadows
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.1
-        layer.shadowRadius = 8
-        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowRadius = 6
+        layer.shadowOffset = CGSize(width: 0, height: 1)
         layer.masksToBounds = false
 //        layer.shouldRasterize =  true
     }
@@ -63,7 +63,7 @@ class FeatureCollectionViewCell: UICollectionViewCell {
     }
     func setupContraints(){
         lbl.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        lbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        lbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        lbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive = true
+        lbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15).isActive = true
     }
 }

@@ -16,6 +16,7 @@ extension MapVC: CLLocationManagerDelegate {
         coordinate = location.coordinate
         mapView.camera = .init(latitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 15.0, bearing: 0, viewingAngle: 10)
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        marker.isTappable = false
     }
 }
 

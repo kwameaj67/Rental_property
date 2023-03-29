@@ -42,21 +42,23 @@ class FilterVC: UIViewController {
     }()
     
     lazy var tableView : UITableView = {
-        let tb = UITableView(frame: .zero, style: .grouped)
-        tb.backgroundColor = .none
-        tb.register(PriceTableViewCell.self, forCellReuseIdentifier: PriceTableViewCell.reusableID)
-        tb.register(ConvenienceTableViewCell.self, forCellReuseIdentifier: ConvenienceTableViewCell.reusableID)
-        tb.register(GuestTableViewCell.self, forCellReuseIdentifier: GuestTableViewCell.reusableID)
-        tb.register(FilterFooterView.self, forHeaderFooterViewReuseIdentifier: FilterFooterView.reusableID)
-        tb.delegate = self
-        tb.dataSource = self
-        tb.allowsSelection = false
-        tb.allowsMultipleSelection = false
-        tb.showsVerticalScrollIndicator = false
-        tb.separatorInset = .zero
-        tb.separatorStyle = .none
-        tb.translatesAutoresizingMaskIntoConstraints = false
-        return tb
+        let tv = UITableView(frame: .zero, style: .grouped)
+        tv.backgroundColor = .none
+        tv.estimatedRowHeight = UITableView.automaticDimension
+//        tv.rowHeight = 200
+        tv.register(PriceTableViewCell.self, forCellReuseIdentifier: PriceTableViewCell.reusableID)
+        tv.register(ConvenienceTableViewCell.self, forCellReuseIdentifier: ConvenienceTableViewCell.reusableID)
+        tv.register(GuestTableViewCell.self, forCellReuseIdentifier: GuestTableViewCell.reusableID)
+        tv.register(FilterFooterView.self, forHeaderFooterViewReuseIdentifier: FilterFooterView.reusableID)
+        tv.delegate = self
+        tv.dataSource = self
+        tv.allowsSelection = false
+        tv.allowsMultipleSelection = false
+        tv.showsVerticalScrollIndicator = false
+        tv.separatorInset = .zero
+        tv.separatorStyle = .none
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        return tv
     }()
     
     func setupViews(){
