@@ -17,5 +17,6 @@ struct PropertyDetail: Decodable {
     var features: [String]
     var guests: Int
     var price: Double
+    var duration: String
     var image_url: [String]
 }

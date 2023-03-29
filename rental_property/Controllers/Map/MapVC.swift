@@ -213,7 +213,7 @@ class MapVC: UIViewController {
             bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.23)
+            bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.21)
         ])
     }
 }

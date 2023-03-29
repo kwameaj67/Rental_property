@@ -103,7 +103,7 @@ class LocationDetailView: UIView {
         [headingLbl,locationImg,locationLbl,guestImg,guestLbl,descriptionLbl,priceLbl,bookBtn,collectionView].forEach { item in
             addSubview(item)
         }
-        priceLbl.attributedText = setAttibutedText(150, "night")
+        priceLbl.attributedText = setAttibutedText("150", "night")
     }
     
     func setupContraints(){
@@ -147,8 +147,8 @@ class LocationDetailView: UIView {
         ])
     }
     
-    func setAttibutedText(_ price: Double,_ period: String ) -> NSMutableAttributedString {
-        let text = NSMutableAttributedString(string: "￡\(price)",attributes: [.foregroundColor: UIColor.black,.font: custom(name: .bold, size: 22, style: .caption1)])
+    func setAttibutedText(_ price: String,_ period: String ) -> NSMutableAttributedString {
+        let text = NSMutableAttributedString(string: "$\(price)",attributes: [.foregroundColor: UIColor.black,.font: custom(name: .bold, size: 22, style: .caption1)])
         text.append(NSAttributedString(string: "\n  /\(period)",attributes: [.foregroundColor: UIColor.black,.font: custom(name: .regular, size: 16, style: .caption1)]))
         return text
     }

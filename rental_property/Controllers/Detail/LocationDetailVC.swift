@@ -70,7 +70,7 @@ class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate 
     
     lazy var starBtn: UIButton = {
         let btn = UIButton()
-        let image = UIImage(systemName: "star")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 20,weight: .semibold))
+        let image = UIImage(systemName: "star")?.withRenderingMode(.alwaysTemplate).withConfiguration(UIImage.SymbolConfiguration(pointSize: 15,weight: .semibold))
         btn.setImage(image, for: .normal)
         btn.tintColor = .black
         btn.backgroundColor = .white
@@ -108,7 +108,7 @@ class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate 
                 self.locationDetailView.descriptionLbl.text = data.description
                 self.locationDetailView.guestLbl.text = "\(data.guests) sleeps"
                 self.locationDetailView.collectionView.features = data.features
-                self.locationDetailView.priceLbl.attributedText = self.locationDetailView.setAttibutedText(data.price, "night")
+                self.locationDetailView.priceLbl.attributedText = self.locationDetailView.setAttibutedText(Int(data.price).formattedWithSeparator, data.duration)
             }
         }
     }
