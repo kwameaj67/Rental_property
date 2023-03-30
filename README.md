@@ -5,7 +5,7 @@ Created this project to build a rental property concept on here https://dribbble
 * The property detail screen displays the main info about the apartments: their location, price, size, and description. 
 * The third screen displays filters.
 
-####The color scheme of this concept is light and airy. The combination of white and black finely combines with colorful apartment pictures and the map.
+#### The color scheme of this concept is light and airy. The combination of white and black finely combines with colorful apartment pictures and the map.
 
 
 ### Note ⚙️
