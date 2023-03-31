@@ -1,5 +1,6 @@
-# rental_property
-Created this project to build a rental property concept on here https://dribbble.com/shots/18688887-Rental-Property-Finder-App
+# Rental Property
+
+Created this project to build a rental property concept on [Here](https://dribbble.com/shots/18688887-Rental-Property-Finder-App)
 
 * The first screen is a map that displays the location of the suitable apartments.  with maps helps users to visualize the location of the desired house or flat. The interface is full of filters that make it easier to find a suitable apartment.
 * The property detail screen displays the main info about the apartments: their location, price, size, and description. 
