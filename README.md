@@ -5,7 +5,7 @@ Created this project to build a rental property concept on here https://dribbble
 * The property detail screen displays the main info about the apartments: their location, price, size, and description. 
 * The third screen displays filters.
 
-#### The color scheme of this concept is light and airy. The combination of white and black finely combines with colorful apartment pictures and the map.
+The color scheme of this concept is light and airy. The combination of white and black finely combines with colorful apartment pictures and the map.
 
 
 ### Note ⚙️
@@ -18,9 +18,16 @@ The application was built using:
 * Swift
 * UIKit (Programmatic approach)
 * Protocol Delegation
-* Google maps sdk
+* Google Maps Sdk [Link](https://developers.google.com/maps/documentation/ios-sdk/overview)
+* AlignedCollectionViewFlowLayout [Link](https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout)
+* CHIPageControl [Link](https://github.com/ChiliLabs/CHIPageControl)
 
 # Screenshots
-<img align='left' src="BoltFood-Clone/Assets.xcassets/home-1.imageset/home.png"  width="250">
-<img align='left' src="BoltFood-Clone/Assets.xcassets/toprated.imageset/toprated.png"  width="250">
-<img  src="BoltFood-Clone/Assets.xcassets/restaurants.imageset/restaurants.png"  width="250">
+<img align='left' src="rental_property/Assets.xcassets/IMG_9212.imageset/IMG_9212.png"  width="250">
+<img src="rental_property/Assets.xcassets/IMG_9217.imageset/IMG_9217.png"  width="250">
+
+<img align='left' src="rental_property/Assets.xcassets/IMG_9213.imageset/IMG_9213.png"  width="250">
+<img src="rental_property/Assets.xcassets/IMG_9214.imageset/IMG_9214.png"  width="250">
+
+<img align='left' src="rental_property/Assets.xcassets/IMG_9215.imageset/IMG_9215.png"  width="250">
+<img src="rental_property/Assets.xcassets/IMG_9218.imageset/IMG_9218.png"  width="250">
