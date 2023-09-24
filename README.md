@@ -24,11 +24,11 @@ The application was built using:
 * CHIPageControl [Link](https://github.com/ChiliLabs/CHIPageControl)
 
 # Screenshots
-<img align='left' src="rental_property/Assets.xcassets/IMG_9212.imageset/IMG_9212.png"  width="250">
-<img src="rental_property/Assets.xcassets/IMG_9217.imageset/IMG_9217.png"  width="250">
+<img align='left' src="rental_property/App/Resources/Assets.xcassets/IMG_9212.imageset/IMG_9212.png"  width="250">
+<img src="rental_property/App/Resources/Assets.xcassets/IMG_9217.imageset/IMG_9217.png"  width="250">
 
-<img align='left' src="rental_property/Assets.xcassets/IMG_9213.imageset/IMG_9213.png"  width="250">
-<img src="rental_property/Assets.xcassets/IMG_9214.imageset/IMG_9214.png"  width="250">
+<img align='left' src="rental_property/App/Resources/Assets.xcassets/IMG_0359.imageset/IMG_0359.png"  width="250">
+<img src="rental_property/App/Resources/Assets.xcassets/IMG_0360.imageset/IMG_0360.png"  width="250">
 
-<img align='left' src="rental_property/Assets.xcassets/IMG_9215.imageset/IMG_9215.png"  width="250">
-<img src="rental_property/Assets.xcassets/IMG_9218.imageset/IMG_9218.png"  width="250">
+<img align='left' src="rental_property/App/Resources/Assets.xcassets/IMG_0357.imageset/IMG_0357.png"  width="250">
+<img src="rental_property/App/Resources/Assets.xcassets/IMG_9218.imageset/IMG_9218.png"  width="250">
