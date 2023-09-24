@@ -116,13 +116,10 @@ extension FilterVC {
     @objc func didTapApplyBtn() {
         generateHapticTouch()
         dismiss(animated: true)
+        filter.conveniences = Array(Set(filter.conveniences))
         dump(filter)
-//        print("PriceFrom: \(filter.priceFrom)\nPriceTo: \(filter.priceTo)\nPropertyType: \(filter.propertyType)\nGuests: \(filter.numberOfGuest)")
-//
-//        _ = filter.conveniences.map({ item in
-//            print("Conveniences: \(item)")
-//        })
     }
+    
 }
 
 // MARK: - PanGestureRecognizerHandler
