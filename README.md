@@ -13,7 +13,8 @@ The color scheme of this concept is light and airy. The combination of white and
 The application was built using: 
 * Xcode 14.2
 * Swift 5.7.2
-
+* 
+![platform](https://img.shields.io/badge/platform-iOS-orange?style=flat-square)
 
 ### Core Technologies 📲
 * Swift
