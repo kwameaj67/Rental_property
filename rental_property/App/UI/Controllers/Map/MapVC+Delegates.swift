@@ -56,11 +56,14 @@ extension MapVC : GMSMapViewDelegate {
     }
     
     func animateOnMarkerDidTap(){
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: .curveEaseInOut){
             self.searchView.transform  = CGAffineTransform(translationX: 0, y: -150)
             self.profileView.transform = CGAffineTransform(translationX: 0, y: 100)
             self.gpsView.transform = CGAffineTransform(translationX: 0, y: 100)
+            
             self.backBtn.isHidden = false
+            self.backBtn.alpha = 1
+            self.backBtn.transform = .identity
             
             self.bottomView.isHidden = false
             self.bottomView.alpha = 1
@@ -70,7 +73,7 @@ extension MapVC : GMSMapViewDelegate {
             self.searchView.isHidden = true
             self.profileView.isHidden = true
             self.gpsView.isHidden = true
-            self.backBtn.alpha = 1
+
             self.bottomView.alpha = 1
         }
     }

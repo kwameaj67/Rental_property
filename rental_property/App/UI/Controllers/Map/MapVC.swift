@@ -69,6 +69,7 @@ class MapVC: UIViewController {
         btn.tintColor = .black
         btn.isHidden = true
         btn.alpha = 0
+        btn.transform = CGAffineTransform(translationX: 0, y: -100)
         btn.backgroundColor = .white
         btn.layer.cornerRadius = 50/2
         btn.addTarget(self, action: #selector(handleBackBtn), for: .primaryActionTriggered)
@@ -97,11 +98,15 @@ class MapVC: UIViewController {
             self.profileView.transform = .identity
             self.gpsView.isHidden = false
             self.gpsView.transform = .identity
+            
+            
+            self.backBtn.isHidden = true
             self.backBtn.alpha = 0
+            self.backBtn.transform = CGAffineTransform(translationX: 0, y: -100)
             self.bottomView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height/2)
             
         } completion: { _ in
-            self.backBtn.isHidden = true
+
             self.bottomView.isHidden = true
             self.bottomView.alpha = 0
         }

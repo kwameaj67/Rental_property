@@ -19,7 +19,6 @@ class FeatureCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool{
         didSet{
-            generateHapticTouch()
             UIView.animate(withDuration: 0.2) {
                 self.layer.borderWidth = self.isSelected ? 3 : 0
                 self.layer.borderColor = self.isSelected ? UIColor.black.cgColor : .none
