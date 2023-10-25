@@ -7,21 +7,18 @@
 
 import UIKit
 
-
-
+enum Font: String {
+    case bold  = "Outfit-Bold"
+    case medium = "Outfit-Medium"
+    case light  = "Outfit-Light"
+    case regular = "Outfit-Regular"
+    case semi_bold  = "Outfit-SemiBold"
     
-    enum Font: String {
-        case bold  = "Outfit-Bold"
-        case medium = "Outfit-Medium"
-        case light  = "Outfit-Light"
-        case regular = "Outfit-Regular"
-        case semi_bold  = "Outfit-SemiBold"
-        
-    }
-    
-    func custom(name: Font, size: CGFloat, style: UIFont.TextStyle) -> UIFont{
-        let font  = UIFont(name: name.rawValue, size: size)!
-        return UIFontMetrics(forTextStyle: style).scaledFont(for: font)
-    }
+}
+
+func custom(name: Font, size: CGFloat, style: UIFont.TextStyle) -> UIFont{
+    let font  = UIFont(name: name.rawValue, size: size)!
+    return UIFontMetrics(forTextStyle: style).scaledFont(for: font)
+}
     
 
