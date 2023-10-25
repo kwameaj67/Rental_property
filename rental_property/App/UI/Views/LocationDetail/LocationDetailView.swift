@@ -15,6 +15,8 @@ class LocationDetailView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        layer.cornerRadius = 30
         translatesAutoresizingMaskIntoConstraints = false
         setupViews()
         setupContraints()
