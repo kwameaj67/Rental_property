@@ -27,8 +27,7 @@ class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate 
         view.backgroundColor = .white
         fetchPropertyDetail()
         
-        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerHandler(_:)))
-        view.addGestureRecognizer(gestureRecognizer)
+        
     }
     
     
@@ -48,6 +47,8 @@ class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate 
     
     lazy var locationImage : LocationCollectionView = {
         var iv = LocationCollectionView()
+        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerHandler(_:)))
+        iv.addGestureRecognizer(gestureRecognizer)
         return iv
     }()
     
@@ -87,8 +88,6 @@ class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate 
     
     lazy var locationDetailView: LocationDetailView = {
         let v = LocationDetailView(frame: .zero)
-        v.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        v.layer.cornerRadius = 30
         return v
     }()
 
@@ -99,17 +98,20 @@ class LocationDetailVC: UIViewController, UIViewControllerTransitioningDelegate 
                 print("DEBUG: Error \(err.localizedDescription)")
             }
             guard let data = data else { return }
+            self.updateViews(data: data)
 
-            // update UI
-            DispatchQueue.main.async {
-                self.locationImage.images = data.image_url
-                self.locationDetailView.headingLbl.text = data.name
-                self.locationDetailView.locationLbl.text = data.location
-                self.locationDetailView.descriptionLbl.text = data.description
-                self.locationDetailView.guestLbl.text = "\(data.guests) sleeps"
-                self.locationDetailView.collectionView.features = data.features
-                self.locationDetailView.priceLbl.attributedText = self.locationDetailView.setAttibutedText(Int(data.price).formattedWithSeparator, data.duration)
-            }
+        }
+    }
+    
+    func updateViews(data: PropertyDetail){
+        DispatchQueue.main.async {
+            self.locationImage.images = data.image_url
+            self.locationDetailView.headingLbl.text = data.name
+            self.locationDetailView.locationLbl.text = data.location
+            self.locationDetailView.descriptionLbl.text = data.description
+            self.locationDetailView.guestLbl.text = "\(data.guests) sleeps"
+            self.locationDetailView.collectionView.features = data.features
+            self.locationDetailView.priceLbl.attributedText = self.locationDetailView.setAttibutedText(Int(data.price).formattedWithSeparator, data.duration)
         }
     }
     
