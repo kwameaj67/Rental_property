@@ -31,11 +31,35 @@ extension MapVC : GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        // animations
-        UIView.animate(withDuration: 0.3) {
-            self.searchView.alpha = 0
-            self.profileView.alpha = 0
-            self.gpsView.alpha = 0
+        animateOnMarkerDidTap()
+        generateHapticTouch()
+        
+//      get marker marker data from userData
+        guard let data = marker.userData as? [String: Any] else { return false}
+        guard let id = data["id"], let name = data["name"]  else { return false }
+
+        bottomView.location_id = id as! Int
+        bottomView.titleLbl.text = name as? String
+
+
+        // hide other markers
+        guard let title = marker.title else { return false }
+        for (index, marker) in allMarkers.enumerated(){
+            guard let markerTitle = marker.title else { return false }
+            if markerTitle.lowercased() != title.lowercased(){
+                UIView.animate(withDuration: 0.3) {
+                    self.allMarkers[index].map = nil
+                }
+            }
+        }
+        return true
+    }
+    
+    func animateOnMarkerDidTap(){
+        UIView.animate(withDuration: 0.2) {
+            self.searchView.transform  = CGAffineTransform(translationX: 0, y: -150)
+            self.profileView.transform = CGAffineTransform(translationX: 0, y: 100)
+            self.gpsView.transform = CGAffineTransform(translationX: 0, y: 100)
             self.backBtn.isHidden = false
             
             self.bottomView.isHidden = false
@@ -49,55 +73,10 @@ extension MapVC : GMSMapViewDelegate {
             self.backBtn.alpha = 1
             self.bottomView.alpha = 1
         }
-        generateHapticTouch()
-        // get marker marker data from userData
-        guard let data = marker.userData as? [String: Any] else { return false}
-        print("You tapped at \(data)")
-        guard let id = data["id"], let name = data["name"]  else { return false }
-        
-        bottomView.location_id = id as! Int
-        bottomView.titleLbl.text = name as? String
-        
-        
-        // hide other markers
-        guard let title = marker.title else { return false }
-        for (index, marker) in allMarkers.enumerated(){
-            guard let markerTitle = marker.title else { return false }
-            if markerTitle.lowercased() != title.lowercased(){
-                UIView.animate(withDuration: 0.3) {
-                    self.allMarkers[index].map = nil
-                }
-            }
-        }
-        return true
     }
 }
 
-// MARK: UIToolbar -
-extension MapVC {
-    func createToolBar() -> UIToolbar{
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let space1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let space2 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let labelButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        labelButton.setTitle("Done", for: .normal)
-        labelButton.setTitleColor(.black, for: .normal)
-        labelButton.titleLabel?.font = custom(name: .medium, size: 18, style: .headline)
-        labelButton.addTarget(self, action: #selector(onDone), for: .primaryActionTriggered)
-        let doneBarItem = UIBarButtonItem(customView: labelButton)
-        doneBarItem.tintColor = UIColor.black
-        toolbar.setItems([space1,space2,doneBarItem], animated: true)
-        return toolbar
-    }
-    
-    @objc func onDone(){
-        let textField = searchView.searchTextField
-        if textField.isFirstResponder{
-            textField.resignFirstResponder()
-        }
-    }
-}
+
 
 // MARK: DidTapGPSDelegate -
 extension MapVC: DidTapGPSDelegate {
@@ -128,5 +107,9 @@ extension MapVC: BottomViewDelegate {
         vc.location_id = id
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true)
+        
+        delay(duration: 1.0) {
+            self.handleBackBtn()
+        }
     }
 }

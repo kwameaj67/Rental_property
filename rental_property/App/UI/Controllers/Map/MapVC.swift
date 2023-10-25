@@ -41,7 +41,6 @@ class MapVC: UIViewController {
     lazy var searchView: SearchView = {
         let v = SearchView(frame: .zero)
         v.delegate = self
-        v.searchTextField.inputAccessoryView = createToolBar()
         return v
     }()
     
@@ -91,22 +90,23 @@ class MapVC: UIViewController {
     // MARK: Selectors -
     @objc func handleBackBtn(){
         generateHapticTouch()
-        UIView.animate(withDuration: 0.3) {
-            self.searchView.alpha = 1
-            self.profileView.alpha = 1
-            self.gpsView.alpha = 1
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: .curveEaseInOut) {
+            self.searchView.isHidden = false
+            self.searchView.transform = .identity
+            self.profileView.isHidden = false
+            self.profileView.transform = .identity
+            self.gpsView.isHidden = false
+            self.gpsView.transform = .identity
             self.backBtn.alpha = 0
             self.bottomView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height/2)
             
         } completion: { _ in
-            self.searchView.isHidden = false
-            self.profileView.isHidden = false
-            self.gpsView.isHidden = false
             self.backBtn.isHidden = true
             self.bottomView.isHidden = true
             self.bottomView.alpha = 0
         }
-        fetchLocations()  // reset all markers on mapview
+        // reset all markers on mapview
+        fetchLocations()
     }
     
     // MARK: API's -
