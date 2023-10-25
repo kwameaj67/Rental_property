@@ -17,7 +17,6 @@ extension UIViewController{
             case .began:
                 initialTouchPoint = touchPoint
             case .changed:
-                print(touchPoint.y, initialTouchPoint.y)
                 if touchPoint.y > initialTouchPoint.y{
                     view.frame.origin.y = touchPoint.y - initialTouchPoint.y
                 }
